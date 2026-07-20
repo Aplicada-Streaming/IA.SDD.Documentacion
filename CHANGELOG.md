@@ -3,6 +3,19 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.2] - 2026-07-20
+
+Documento de análisis integral que responde una consulta sobre organización de código y la reorganización de la consulta que lo origina.
+
+### Añadido
+
+- **Análisis integral «Del modelo por tipo técnico a las capas actuales»** en `Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/61-Analisis-Integral/Analisis-Integral.md`: ~590 líneas y 2 diagramas Mermaid. Responde, sobre el dominio de turnos, qué ocurrió con los patrones DAO, MVC, Repository, DTO y Entity y cómo se re-encuadran en el modelo de capas actual.
+- **Prompt de consulta** en `PROMPTs/Consultas/01.md` que origina el análisis integral.
+
+### Eliminado
+
+- `CONSULTAS/01.md` y la carpeta `CONSULTAS/`: la consulta se reformuló como prompt en `PROMPTs/Consultas/`.
+
 ## [1.1] - 2026-07-20
 
 Dos guías de estudio nuevas sobre organización de código y APIs REST, más la reorganización de los prompts y material de análisis nuevo.
