@@ -1,7 +1,7 @@
 # Crear guía de estudio — Documentación técnica
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Crear-Guia-de-Estudio-Documentacion-Tecnica.md`
+> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guias-Estudio/Generacion-Documentacion-Tecnica/Crear-Guia-de-Estudio-Documentacion-Tecnica.md`
 
 ---
 
@@ -9,7 +9,7 @@
 
 La temática es la **documentación técnica de software**: tanto su comprensión como su elaboración, de modo que una pieza de software pueda ser operada, evolucionada o reconstruida por otros actores de la cadena de desarrollo.
 
-El catálogo de tipos de documentación técnica a cubrir está en `/IA/IA.SDD.Documentacion/PROMPTs/Crear-Guia-de-Estudio-Documentacion-Tecnica/Tipos-De-Documentacion-Tecnica.md`.
+El catálogo de tipos de documentación técnica a cubrir está en `/IA/IA.SDD.Documentacion/PROMPTs/Generacion-Documentacion-Tecnica/Inputs/Tipos-De-Documentacion-Tecnica.md`.
 
 No existe todavía un cuerpo documental que ordene estos tipos, los relacione con las situaciones reales de un proyecto y permita a un lector formar criterio sobre cuál producir en cada caso.
 

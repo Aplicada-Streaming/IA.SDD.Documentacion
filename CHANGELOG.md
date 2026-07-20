@@ -3,6 +3,29 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.1] - 2026-07-20
+
+Dos guías de estudio nuevas sobre organización de código y APIs REST, más la reorganización de los prompts y material de análisis nuevo.
+
+### Añadido
+
+- **Guía de estudio «Organización, estilo y patrones de código»** en `Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/`: 37 documentos, ~10.700 líneas y 23 diagramas Mermaid. Cubre arquitectura de servicios (monolito, monolito modular y microservicios), organización de soluciones .NET, estilo de codificación y patrones de acceso a datos y de endpoint, con marco de referencia, mapa conceptual y anexos.
+- **Guía de estudio «Organización, estilo y REST API»** en `Guias-de-Estudios/Organizacion-Estilo-Rest-API/`: 56 documentos, ~21.300 líneas y 61 diagramas Mermaid. Cubre fundamentos REST, diseño de recursos, semántica HTTP, contratos y representaciones, evolución y versionado, especificación con OpenAPI, seguridad y robustez, implementación en .NET y guías de la industria (Google AIP, Microsoft/Azure, Zalando).
+- **Análisis de características UI/IX** en `Analisis/Caracteristicas-UI-IX/Caracteristicas.md`.
+- **Consultas** en `CONSULTAS/`.
+- **Prompts nuevos** en `PROMPTs/Feactures/`: extracción de características de proyecto web y feature SDD de validación UX/UI; y los prompts que originan las dos guías de estudio nuevas en `PROMPTs/Guias-Estudio/`.
+
+### Cambiado
+
+- **Reorganización de `PROMPTs/`** en subcarpetas temáticas:
+  - `Crear-Prompt-adecuado.md` movido a `PROMPTs/Promptings/`.
+  - `Refactorizando-Repo-Nombre.md` movido a `PROMPTs/Feactures/01-Refactorizando-Repo-Nombre.md`.
+  - `Crear-Guia-de-Estudio-Documentacion-Tecnica.md` y su input `Tipos-De-Documentacion-Tecnica.md` movidos a `PROMPTs/Guias-Estudio/Generacion-Documentacion-Tecnica/`.
+
+### Eliminado
+
+- `Analisis/IA.Documentacion/Contexto.md`.
+
 ## [1.0] - 2026-07-18
 
 Primera versión del contenido del repositorio: la guía de estudio sobre documentación técnica, más el material de análisis y los prompts que la originaron.
