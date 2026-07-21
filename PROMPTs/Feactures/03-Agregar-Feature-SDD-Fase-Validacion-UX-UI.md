@@ -4,6 +4,8 @@
 > - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/03-Agregar-Feature-SDD-Fase-Validacion-UX-UI.md`
 > Overview: agregar interactividad en el diseño SDD/UX-UI, elementos de evidencia y sensado de deriva.
 
+---
+
 # Contexto
 
 Leer `/IA/IA.SDD/README.md` y `/IA/IA.SDD/SDD/Guides/Guia-Usuario-SDD-v1.0.md`, trata sobre un `Framework SDD` para diseñar software asistido por IA.
@@ -14,6 +16,8 @@ Tambien, se necesita introducir un etapa de validación visual de propuesta, de 
 
 Y por último, se necesita introducir mecanismos y evidencias constrastables para que los agentes no deriven.
 
+
+---
 
 # Objetivo
 
@@ -146,6 +150,7 @@ Workspace
 Todo esto Aplicaría a:
 - Proyectos de aplicaciones visuales como proyectos móviles y proyectos web finales o front y libreria de componentes web dentro de la solución.
 
+--
 
 # Restricciones
 

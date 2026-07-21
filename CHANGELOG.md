@@ -3,6 +3,20 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.3] - 2026-07-20
+
+Material nuevo sobre el flujo de trabajo Git del agente y un prompt de consultas sobre el documento intake, más ajustes menores en prompts existentes.
+
+### Añadido
+
+- **Flujo de trabajo Git para el agente** en `Analisis/git-workflow-agente.md`: define dos modalidades (feature branch + PR con merge manual, y trabajo directo sobre `main`), convenciones fijas de rama base, changelog, nombres de rama y mensajes *Conventional Commits*.
+- **Prompt de consultas sobre el documento intake** en `PROMPTs/Feactures/04-Consultas-Sobre-Tabla-Contenido-Y-Valores.md`: consultas sobre valores de medición/ejemplos y tabla de contenido en el documento intake generado por el framework SDD.
+
+### Cambiado
+
+- **`PROMPTs/Feactures/01-Refactorizando-Repo-Nombre.md`**: la carpeta `Docs` de la estructura de ejemplo ahora usa `.gitkeep` en lugar de un comentario sobre especificaciones generadas.
+- **`PROMPTs/Feactures/03-Agregar-Feature-SDD-Fase-Validacion-UX-UI.md`**: separadores de sección para mejorar la legibilidad.
+
 ## [1.2] - 2026-07-20
 
 Documento de análisis integral que responde una consulta sobre organización de código y la reorganización de la consulta que lo origina.

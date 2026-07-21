@@ -99,7 +99,7 @@ Workspace
   |    |    |   |- otros ficheros
   |    |    |   
   |    |    |- Docs
-  |    |    |   |- otros ficheros (las especificaciones que generá el prompt maestro)
+  |    |    |   |- .gitkeep
   |    |    |
   |    |    |- README.md      
   |    |    
