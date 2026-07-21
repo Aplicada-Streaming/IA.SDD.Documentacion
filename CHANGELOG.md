@@ -3,6 +3,15 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.4] - 2026-07-21
+
+Guía de estudio nueva sobre cómo redactar un informe de solución (arquitectura, despliegue y requisitos), más el prompt que la origina.
+
+### Añadido
+
+- **Guía de estudio «Informe de solución: arquitectura, despliegue y requisitos»** en `Guias-de-Estudios/Documentacion-Informe-Despliegue/`: 30 documentos, ~5.350 líneas y 23 diagramas Mermaid. Enseña a escribir un informe que describe una solución de software en términos de arquitectura, despliegue y resolución de requisitos funcionales y no funcionales, con marco de referencia (escenarios, contextos y actores), mapa conceptual, cinco familias temáticas (naturaleza del informe, arquitectura, despliegue, requisitos y redacción) y anexos (plantilla, glosario, lista de verificación, referencias y pendientes). Todos los ejemplos usan un dominio de gestión de audiencias distribuido en el borde, sobre .NET 10, ASP.NET Core, Blazor, Worker Services y PostgreSQL.
+- **Prompt de generación** en `PROMPTs/Guias-Estudio/Generacion-Documentacion-Informe-Despliegue/Generacion-Documentacion-Informe-Despliegue.md` que origina la guía.
+
 ## [1.3] - 2026-07-20
 
 Material nuevo sobre el flujo de trabajo Git del agente y un prompt de consultas sobre el documento intake, más ajustes menores en prompts existentes.
