@@ -3,6 +3,26 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.5] - 2026-07-23
+
+Reorganización de `PROMPTs/` y `Analisis/` a un esquema de una carpeta por unidad de trabajo, más un análisis nuevo sobre el consumo de contexto del orquestador Generar-SDD y dos prompts nuevos.
+
+### Añadido
+
+- **Análisis «Optimizaciones del orquestador Generar-SDD»** en `Analisis/Analisis-Optimizaciones-Generar-SDD/`: evalúa la corrida real de generación de SDD sobre `DEV/SAI.Service.Core` contra el Master-Prompt v3.4 del framework, con foco en qué pasos conviene delegar a subagentes de contexto aislado para no inflar el contexto del orquestador. Distingue memoria de pesos y memoria de contexto, inventaria los mecanismos que el framework ya resuelve bien, señala dónde se infla el contexto en la práctica, prioriza los pasos a delegar, propone cómo medir la mejora y registra el doble rol del `Historial/` como artefacto de mejora. Es de solo lectura: las propuestas sobre el framework quedan como recomendación, no aplicadas.
+- **Prompt «Extraer e incorporar perfil UX/UI al SDD»** en `PROMPTs/Feactures/01-Extraer-Incorporar-Perfil-UX-UI-A-SDD/`, con su registro de ejecución en `Hitory/01.Log.md`: reglas de diseño web genéricas, su especialización a Blazor *interactive server* con MudBlazor y la decisión de ubicarlas en `devs/references/design/` del template SDD.
+- **Prompt «Crear guides»** en `PROMPTs/Feactures/06-Crear-Guides/`: guía rápida y de consulta para aplicar la metodología SDD sobre un proyecto nuevo, derivada de `SDD-User-Guide.md`.
+- **Captura del panel de verificaciones** en `Analisis/Estudio-UX-UI-Historias/Captura-Panel-De-Verificaciones.png`.
+- **`README.md` placeholder** en `Guias-de-Estudios/`, `PROMPTs/` y `PROMPTs/Guia-De-Estudio/`, como índices a completar.
+
+### Cambiado
+
+- **Una carpeta por prompt en `PROMPTs/Feactures/`**: cada prompt pasa de archivo suelto a carpeta numerada con el `.md` adentro y su `History/` cuando corresponde. La numeración se corre para dar el lugar 01 al prompt de perfil UX/UI: `Refactorizando-Repo-Nombre` a `02-`, `Extraer-Caracteristicas-De-Proyecto-Web` a `03-`, `Agregar-Feature-SDD-Fase-Validacion-UX-UI` a `04-Agregar-Feature-SDD-Maqueta-Validacion-UX-UI` y `Consultas-Sobre-Tabla-Contenido-Y-Valores` a `05-`.
+- **`PROMPTs/Consultas/01.md`** movido a `PROMPTs/Guia-De-Estudio/01-Crear-Guia-Organizacion-Estilo-Patrones-Codigo/Crear-Guia-Organizacion-Estilo-Patrones-Codigo.md`: la consulta sobre organización de código se encuadra como prompt de generación de guía de estudio, no como consulta suelta. La carpeta `PROMPTs/Consultas/` desaparece.
+- **`PROMPTs/Promptings/Crear-Prompt-adecuado.md`** renombrado a `Crear-Prompt-Adecuado.md`, con bloque *Overview* en la invocación.
+- **`Analisis/IA.Documentacion/`** renombrada a `Analisis/IA-Documentacion/` y **`Analisis/git-workflow-agente.md`** movido a `Analisis/Git-Workflow-Agente/Git-Workflow-Agente.md`, para unificar el criterio de nombres con guiones y una carpeta por tema.
+- **Restricciones uniformes en los prompts**: los prompts de *features* incorporan «No inventar información; toda afirmación debe estar respaldada por evidencia verificable» y separadores de sección consistentes.
+
 ## [1.4] - 2026-07-21
 
 Guía de estudio nueva sobre cómo redactar un informe de solución (arquitectura, despliegue y requisitos), más el prompt que la origina.

@@ -3,6 +3,8 @@
 > **Invocación**:
 > - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/01-Refactorizando-Repo-Nombre.md`
 
+---
+
 # Contexto
 
 He tomado el repositorio `https://github.com/Aplicada-Streaming/Template_IA_SDD2.0R.git` y a partir de este cree uno nuevo con el contenido de este. El nuevo repositorio es: `https://github.com/Aplicada-Streaming/IA.SDD.git` y lo clone en `/IA/IA.SDD`.
@@ -42,6 +44,7 @@ El repositorio contiene un framework para crear código por especificación (SDD
 Este prompt orquestador va a generar documentación de especificación primero en el
 `/<repositorio-Destino>/SDD/docs` y finalizada la documentación de especificación este continua con la codificación de la solución propuesta en la misma documentación. 
 
+---
 
 # Objetivos
 
@@ -122,9 +125,13 @@ Leer y Ejecutar `/IA/IA.SDD/PROMPTS/PROMPT-Agente-Bootstrap-SDD.md` en el reposi
 El agente crearía la esctructura carpeta junto con documentación y el manifest en el respositorio destino. 
 
 
+---
+
 # Solicitudes
 
-1. Planifica y arma el plan acorde a los objetivos propuestos. 
-2. Muestra los hallazgos, el plan de modificaciones resultantes y esperá a que te confirme.
+- Planifica y arma el plan acorde a los objetivos propuestos. 
+- Muestra los hallazgos, el plan de modificaciones resultantes y esperá a que te confirme.
+- No inventar información.
+- No inventar información; toda afirmación debe estar respaldada por evidencia verificable.
 
 

@@ -2,6 +2,8 @@
 
 > **Invocación**:
 > - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Crear-Prompt-adecuado.md`
+> Overview: mejora de las guías.
+
 
 ---
 

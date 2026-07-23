@@ -1,8 +1,8 @@
 # Tool-Prompt — Fase SDD - Validacion-UX-UI
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/03-Agregar-Feature-SDD-Fase-Validacion-UX-UI.md`
-> Overview: agregar interactividad en el diseño SDD/UX-UI, elementos de evidencia y sensado de deriva.
+> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/04-Agregar-Feature-SDD-Maqueta-Validacion-UX-UI/Agregar-Feature-SDD-Maqueta-Validacion-UX-UI.md`
+> Overview: agregar fase de validación y maquetado como fase de validación. Primera prueba de sensor de deriva.
 
 ---
 
@@ -29,6 +29,7 @@ Y por último, se necesita introducir mecanismos y evidencias constrastables par
 
 4. La maqueta generada junto con las correcciones de modelos y estuctura de datos debe servir para introducir  elementos para el sensado de deriva de los agentes. Estos elementos podrían aportar un guía tutora para comparar (tanto para el agente humano como el agente IA) si el resultado logrado durante las etapas de codificación se ajustan tanto a los modelos de datos como los diseños visuales aprobados en la etapa final de maquetización. Así se introduciría un mecanismo de control de deriva de agentes (`sensado de deriva`). Con elementos verificables permitiría introducir reglas como ` Toda afirmación deberá estar respaldada por evidencias verificables.`. Las evidencias verificables se ajustarian en esta etapa de prototipado inicial.
 
+---
 
 # Solicitud
 
@@ -150,9 +151,11 @@ Workspace
 Todo esto Aplicaría a:
 - Proyectos de aplicaciones visuales como proyectos móviles y proyectos web finales o front y libreria de componentes web dentro de la solución.
 
---
+
+---
 
 # Restricciones
 
 - Ser fiel a la estructura del `Framework SDD`, siguiendo en principio lo dictado por `/IA/IA.SDD/SDD/Guides/Guia-Usuario-SDD-v1.0.md`.
 - No inventar información; toda afirmación debe estar respaldada por evidencia verificable.
+- Toda afirmación deberá estar respaldada por evidencias verificables.

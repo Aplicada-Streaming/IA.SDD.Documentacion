@@ -1,7 +1,8 @@
 # Crear guía de estudio —  Sobre el estandar Rest API en .NET
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Consultas/01.md`
+> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guia-De-Estudio/01-Crear-Guia-Organizacion-Estilo-Patrones-Codigo/Crear-Guia-Organizacion-Estilo-Patrones-Codigo.md`
+> Overview: mejora de las guías.
 
 ---
 
@@ -65,9 +66,10 @@ Como podes definir el concepto de domains para indentificarlo claramente.
 El concepto de Contracts, se implementa con register en .net , suena  los objetos planos de java o pojos o pocos en c# 
 
 
-
+---
 
 # Restricciones
+
 - Base integramente en primer lugar en la cadena de documentos propuesta por `IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/README.md` y luego puedes tomar otras referencias.
 - No modifiques ningun documento salvo el solicitado.
 - No inventar estándares ni atribuir prácticas a fuentes que no se hayan verificado.
