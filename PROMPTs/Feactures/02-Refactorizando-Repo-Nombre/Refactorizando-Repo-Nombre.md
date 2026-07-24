@@ -1,7 +1,7 @@
 # Tool-Prompt — Refactorizando SDD
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/01-Refactorizando-Repo-Nombre.md`
+> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/02-Refactorizando-Repo-Nombre/Refactorizando-Repo-Nombre.md`
 
 ---
 

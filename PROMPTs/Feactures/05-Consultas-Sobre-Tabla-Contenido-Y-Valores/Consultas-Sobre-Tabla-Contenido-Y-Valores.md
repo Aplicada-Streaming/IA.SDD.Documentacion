@@ -12,7 +12,6 @@ lee `/DEV/SAI.Service.Core/SDD/Intake/SOLUTION-INTAKE-Sai-Service-Core-v1.0.md` 
 
 fue generado por un framework sdd: `/IA/IA.SDD/README.md`, corriendo el siguiente prompt: `/DEV/SAI.Service.Core/SDD/Intake/SOLUTION-INTAKE-Sai-Service-Core-v1.0.md`
 
-
 ---
 
 # Objetivo

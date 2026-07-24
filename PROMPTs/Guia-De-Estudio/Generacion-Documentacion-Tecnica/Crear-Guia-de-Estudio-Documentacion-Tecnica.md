@@ -2,6 +2,7 @@
 
 > **Invocación**:
 > - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guias-Estudio/Generacion-Documentacion-Tecnica/Crear-Guia-de-Estudio-Documentacion-Tecnica.md`
+> Overview: generación de guía de estudio sobre documentación técnica de software
 
 ---
 

@@ -1,7 +1,9 @@
-# Crear guía de estudio —  Sobre el estandar Rest API en .NET
+# Crear guía de estudio — Sobre Guía de despliegue
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guias-Estudio/Generacion-Documentacion-Informe-Despliegue/Generacion-Documentacion-Informe-Despliegue.md`
+> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guia-De-Estudio/Generacion-Documentacion-Informe-Despliegue/Generacion-Documentacion-Informe-Despliegue.md`
+> Overview: generación de guía de técnica sobre informes de despliegue
+
 
 ---
 

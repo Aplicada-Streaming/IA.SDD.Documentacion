@@ -3,6 +3,21 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.6] - 2026-07-24
+
+Consolidación de los prompts de guías de estudio en una única carpeta `PROMPTs/Guia-De-Estudio/` y reescritura del prompt «Crear guides» como tool-prompt reejecutable que genera la guía *getting started* del framework SDD.
+
+### Añadido
+
+- **Registro de ejecución** del prompt «Crear guides» en `PROMPTs/Feactures/06-Crear-Guides/Historial/00.md`: documenta la corrida que produjo la «SDD Getting Started Guide» (fuentes leídas, verificación de rutas del framework y contenido de la guía generada).
+
+### Cambiado
+
+- **Consolidación de `PROMPTs/Guias-Estudio/` en `PROMPTs/Guia-De-Estudio/`**: los prompts de generación de guías de estudio se unifican bajo una sola carpeta con nombre consistente (guiones y singular), y se quita la numeración `01-`. Se mueven sin cambios de contenido `Generacion-Documentacion-Informe-Despliegue/`, `Generacion-Documentacion-Tecnica/` (con su `Inputs/Tipos-De-Documentacion-Tecnica.md`), `Organizacion-Estilo-Patrones-Codigo/`, `Organizacion-Estilo-Rest-API/` y `Crear-Guia-Organizacion-Estilo-Patrones-Codigo/`. La carpeta `PROMPTs/Guias-Estudio/` desaparece.
+- **Prompt «Crear guides» (`PROMPTs/Feactures/06-Crear-Guides/Crear-Guides.md`) reescrito** de una consulta suelta a un tool-prompt completo: describe el modelo de tres repositorios (framework, destino y documentación) y el flujo de seis pasos del proceso SDD, y encarga generar la **«SDD Getting Started Guide»** en `/IA/IA.SDD/SDD/Guides/SDD-Getting-Started-Guide.md`, con reglas, tabla de referencias y la regla de audiencia dual.
+- **`PROMPTs/Feactures/02-Refactorizando-Repo-Nombre/Refactorizando-Repo-Nombre.md`**: la ruta de invocación apunta a la carpeta actual del prompt.
+- **`PROMPTs/Feactures/05-Consultas-Sobre-Tabla-Contenido-Y-Valores/Consultas-Sobre-Tabla-Contenido-Y-Valores.md`**: limpieza menor de formato.
+
 ## [1.5] - 2026-07-23
 
 Reorganización de `PROMPTs/` y `Analisis/` a un esquema de una carpeta por unidad de trabajo, más un análisis nuevo sobre el consumo de contexto del orquestador Generar-SDD y dos prompts nuevos.

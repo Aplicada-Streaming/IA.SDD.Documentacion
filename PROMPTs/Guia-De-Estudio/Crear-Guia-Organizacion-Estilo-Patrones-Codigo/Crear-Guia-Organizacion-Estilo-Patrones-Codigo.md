@@ -1,8 +1,8 @@
-# Crear guía de estudio —  Sobre el estandar Rest API en .NET
+# Crear guía de estudio —  Sobre Estilos-Patrones-Codigo
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guia-De-Estudio/01-Crear-Guia-Organizacion-Estilo-Patrones-Codigo/Crear-Guia-Organizacion-Estilo-Patrones-Codigo.md`
-> Overview: mejora de las guías.
+> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Guia-De-Estudio/Crear-Guia-Organizacion-Estilo-Patrones-Codigo/Crear-Guia-Organizacion-Estilo-Patrones-Codigo.md`
+> Overview: crea una referencias sobre estructuras de proyectos, nomenclaturas.
 
 ---
 
@@ -71,7 +71,11 @@ El concepto de Contracts, se implementa con register en .net , suena  los objeto
 # Restricciones
 
 - Base integramente en primer lugar en la cadena de documentos propuesta por `IA/IA.SDD.Documentacion/Guias-de-Estudios/Organizacion-Estilo-Patrones-Codigo/README.md` y luego puedes tomar otras referencias.
+
 - No modifiques ningun documento salvo el solicitado.
+
 - No inventar estándares ni atribuir prácticas a fuentes que no se hayan verificado.
+
 - No realizar commit, push ni pull request.
+
 - Investigar las fuentes que hagan falta para sostener la calidad, sin límite de tiempo ni de tokens, dejando el avance en estado retomable ante cortes por consumo.
