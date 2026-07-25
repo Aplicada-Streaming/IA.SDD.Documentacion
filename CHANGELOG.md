@@ -3,6 +3,16 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.7] - 2026-07-25
+
+Dos prompts nuevos en `PROMPTs/Feactures/`: la normalización de nombres de los archivos de reglas del framework SDD y el registro de historial de trabajo de los agentes.
+
+### Añadido
+
+- **Prompt «Crear refactorización rules file name»** en `PROMPTs/Feactures/07-Crear-Refactorizacion-Rules-File-Name/`: tool-prompt que encarga quitar el prefijo numérico a las doce reglas por categoría de `/IA/IA.SDD/SDD/Devs/Rules` (`00-Rules-Contexto.md` a `Rules-Contexto.md`, …, `11-Rules-Examples.md` a `Rules-Examples.md`), dejando intactas las cuatro meta-reglas (`Root-`, `Intake-`, `Maqueta-` y `Deriva-Rules.md`), y actualizar todas las referencias a esos nombres en los markdown de `/IA/IA.SDD` verificando la coherencia del resultado.
+- **Prompt «Crear log file»** en `PROMPTs/Feactures/Crear-Log-File/`: plantea registrar el historial de avance de los agentes para poder retomar el flujo del prompt orquestador recuperando contexto y tareas de los subagentes, y para que el desarrollador del framework SDD pueda revisar decisiones y resultados de cada etapa. Incluye la tabla de referencias del caso `SAI.Service.Core` (intake, prompt integrador, prompt orquestador y ambos repositorios).
+- **Registro de ejecución** en `PROMPTs/Feactures/Crear-Log-File/OUTPUTs/00.md`: documenta la corrida del renombrado de reglas en dos tandas — primero `/IA/IA.SDD` (20 markdown, ~200 ocurrencias, más tres arreglos de coherencia que el reemplazo mecánico no cubría: el placeholder `XX-Rules-<Categoria>.md`, el rango colapsado de `SDD-User-Guide.md:358` y la numeración que sí es semántica en títulos, carpetas y tablas de auditoría) y después `DEV/` (18 markdown de `SAI.Service.Core`, incluida la forma abreviada `05-Rules`, `08-Rules`, `10-Rules` expandida al nombre real de cada regla). Deja constancia del único archivo no tocado por estar bajo `PROMPTs/`.
+
 ## [1.6] - 2026-07-24
 
 Consolidación de los prompts de guías de estudio en una única carpeta `PROMPTs/Guia-De-Estudio/` y reescritura del prompt «Crear guides» como tool-prompt reejecutable que genera la guía *getting started* del framework SDD.
