@@ -3,7 +3,7 @@
 **Prompt de origen:** `Editar-Agent-Rules-Documentacion-Examples-final.md`
 **Repositorio intervenido:** `/IA/IA.SDD/`
 **Fecha de apertura:** 2026-07-26
-**Estado global:** **CERRADA** — nueve etapas ejecutadas con veredicto CONFORME el 2026-07-26, sin decisiones abiertas. Cambios en el working tree, sin commitear.
+**Estado global:** **CERRADA** — nueve etapas ejecutadas con veredicto CONFORME el 2026-07-26, sin decisiones abiertas. Publicada sobre `main` por indicación del responsable del framework, que levantó la restricción de no commitear.
 
 Este archivo fue el mecanismo de reanudación entre sesiones. La intervención está cerrada: no quedan etapas pendientes. El resultado completo, con los tres reportes de verificación, las inconsistencias detectadas y las decisiones abiertas, está en `Informe-Intervencion-v1.0.md`.
 

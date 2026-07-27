@@ -3,6 +3,15 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.9] - 2026-07-26
+
+Actualización del registro de la intervención sobre `/IA/IA.SDD/`: el estado de entrega deja de ser «working tree sin commitear» y pasa a publicado sobre `main`.
+
+### Cambiado
+
+- **`PROMPTs/Feactures/09-Editar-Agent-Rules-Documentacion-Examples-final/Estado-Intervencion.md`**: el estado global sigue siendo **CERRADA** con las nueve etapas CONFORME, pero ya no anota los cambios como pendientes en el working tree. Registra que el responsable del framework levantó la restricción de no commitear y que la intervención se publicó sobre `main`.
+- **`PROMPTs/Feactures/09-Editar-Agent-Rules-Documentacion-Examples-final/Informe-Intervencion-v1.0.md`**, §9 «Estado de entrega»: reescrito en la misma línea. Deja constancia de que la restricción del prompt se levantó al cierre tras la revisión del responsable, y reemplaza la nota sobre `SDD/Guides/SDD-Development-Guide.md` como untracked por el alcance real de la publicación, que incluye la eliminación de material histórico absorbido de la entrada `[3.1]` del changelog del framework: las carpetas `SDD/Devs/Reformulacion/` y `SDD/Devs/Intake/_legacy/`, seis archivos sin referencias entrantes preservados en el historial de git.
+
 ## [1.8] - 2026-07-26
 
 Prompt nuevo de reordenamiento de las categorías 10 y 11 del framework SDD con todo el registro de su corrida, una carpeta `PROMPTs/Analisis/` nueva y la renumeración del prompt de log de agentes.

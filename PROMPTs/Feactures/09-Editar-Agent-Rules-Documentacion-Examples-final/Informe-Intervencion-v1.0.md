@@ -233,9 +233,9 @@ Las siete decisiones tomadas durante la corrida (DEC-01 a DEC-07) están registr
 
 ## 9. Estado de entrega
 
-Los cambios quedan en el **working tree**, sin commitear ni pushear, según la restricción del prompt. El repositorio no tiene commits nuevos.
+La restricción del prompt pedía dejar los cambios en el working tree sin commitear ni pushear. **El responsable del framework levantó esa restricción al cierre** y ordenó commitear y publicar sobre `main`, tras revisar el resultado. La intervención se entrega publicada.
 
-`SDD/Guides/SDD-Development-Guide.md` figura como untracked: existía como archivo vacío nunca commiteado, y esta intervención le dio contenido.
+Se incluye en el commit la eliminación de material histórico absorbido registrada en la entrada `[3.1]` del `CHANGELOG.md`: las carpetas `SDD/Devs/Reformulacion/` y `SDD/Devs/Intake/_legacy/`, seis archivos sin referencias entrantes cuyo contenido quedó absorbido en las reglas vigentes. El historial de git los preserva.
 
 ---
 
