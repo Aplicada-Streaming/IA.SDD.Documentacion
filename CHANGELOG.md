@@ -3,6 +3,24 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.8] - 2026-07-26
+
+Prompt nuevo de reordenamiento de las categorías 10 y 11 del framework SDD con todo el registro de su corrida, una carpeta `PROMPTs/Analisis/` nueva y la renumeración del prompt de log de agentes.
+
+### Añadido
+
+- **Prompt «Editar agent rules documentación examples final»** en `PROMPTs/Feactures/09-Editar-Agent-Rules-Documentacion-Examples-final/`: tool-prompt autocontenido (790 líneas) que interviene las reglas constructivas del framework SDD para intercambiar las categorías 10 y 11, redefinir `10-Examples` con doble arista (referencia de integración y arnés de autovalidación), redefinir `11-Documentacion` como cuerpo documental de entrega organizado por rol de intervención (integrador, mantenedor, operador) y destinado a un lector humano en primer contacto, incorporar el modelo de documentación viva en tres momentos con cadencia anclada al cierre de sprint, agregar tabla de contenido a las categorías 00 a 09, y dotar al framework de un README raíz como router y de una guía de desarrollo y extensibilidad. Diagnostica tres déficits —un solo rol de intervención modelado, ausencia de documento de primer contacto y criterios de calidad inaplicables en una fase pre-código— y segmenta la ejecución en ocho etapas con control de coherencia entre cada una.
+- **Registro de la intervención** en la misma carpeta, con el material que produjo la corrida sobre `/IA/IA.SDD/`:
+  - `Estado-Intervencion.md`: tablero de las nueve etapas ejecutadas (E0 a E8), todas con veredicto CONFORME, más las siete decisiones DEC-01 a DEC-07 tomadas por el responsable del framework. Fue el mecanismo de reanudación entre sesiones; queda **cerrada**, sin etapas ni decisiones pendientes.
+  - `Informe-Intervencion-v1.0.md` (versión 1.1): informe de cierre. Veintiséis archivos tocados —veinticuatro modificados, uno renombrado (`Rules-Developer-Guide.md` a `Rules-Documentacion.md`, con `git mv`) y `SDD-Development-Guide.md` que pasa de 0 bytes a contenido—, framework en changelog 3.0. Registra la corrección de los tres déficits y el defecto que E8 destapó: E2 había dejado a `Rules-Calidad-Y-Pruebas.md` contradiciendo a `Deriva-Rules.md` sobre cuándo se emite la matriz de sensado.
+  - `Nota-Coherencia-E1.md` a `Nota-Coherencia-E8.md`: verificación de implantación de cada etapa —renombrado estructural, categoría 10, categoría 11, documentación viva en el orquestador, navegabilidad de 00 a 09, superficie de entrada, cierre e E8 de cierre de decisiones abiertas—, siguiendo el patrón de `Coherencia-Auditoria-Marco-v1.0.md`. Las notas de las etapas cuyas decisiones se resolvieron después llevan la nota posterior de E8 que remite al cierre.
+- **Prompt «Generación ayuda de usuario documentación»** en `PROMPTs/Analisis/01-Generacion-Ayuda-Usuario-Documentacion/`: primera carpeta bajo `PROMPTs/Analisis/`. Plantea determinar el mecanismo para generar la ayuda de usuario del framework a partir de la necesidad de registrar el historial de avance de los agentes, con la alternativa de un `Log.md` en `/<Repositorio-Destino>/SDD/Logs/` y la consideración de subagentes en paralelo escribiendo sobre el mismo fichero.
+
+### Cambiado
+
+- **`PROMPTs/Feactures/Crear-Log-File/` renombrada a `08-Crear-Log-File/`**, para entrar en la numeración del resto de los prompts de *features*. El registro de ejecución `OUTPUTs/00.md` se mueve sin cambios.
+- **Prompt «Crear log file» (`08-Crear-Log-File/Crear-Log-File.md`) reescrito**: el objetivo deja de ser la guía *getting started* y pasa a ser el log de contexto y registro del flujo de trabajo, con los dos usos separados —reanudar en una sesión nueva desde el estado de interrupción, y darle al desarrollador un historial consultable de la actividad orquestada—. Las solicitudes incorporan la evaluación de alternativas y la propuesta concreta del `Log.md` en el repositorio destino, con la salvedad de la escritura concurrente de subagentes.
+
 ## [1.7] - 2026-07-25
 
 Dos prompts nuevos en `PROMPTs/Feactures/`: la normalización de nombres de los archivos de reglas del framework SDD y el registro de historial de trabajo de los agentes.

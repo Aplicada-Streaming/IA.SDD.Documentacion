@@ -11,23 +11,35 @@
 Leer [SDD User Guide], la guía que describe la metodología de uso del `Framework SDD` (SDD, Spec-Driven Development) para especificar y codear por asistencia de IA.
 
 Actualmente se requiere registrar los avances o historial de los avances de los agentes en el trabajo de sus tareas.
-1. Este historial debería servir para poder retomar el flujo de trabajo lanzado por el prompt orquestador recuparando el contexto y las tareas en las que estaban los subagentes.
-2. Asi mismo, ese historial tambien serviría que el desarrollador de  `Framework SDD`  puedea revisar y consultar sobre decisiones tomadas, resultados presentados en cada etapa, deciciones.
+
 
 ---
 
 ## Objetivo
 
-Crear un documento que permita a un desarrollador comenzar por primera vez a diseñar y construir una nueva solución usando este `Framework SDD`.
+Determinar un mecanismo claro para generar la ayuda de usuario
 
-Retroalimentar con la experiencia expuesta en [Contexto](#contexto) la documentación de usuario del `Framework SDD`.
 
 ---
 
 ## Solicitudes
 
 1. Leer y evaluar [SDD User Guide].
-2. A partir de los objetivos y el contexto planteado, generar el documento markdown **"SDD Getting Started Guide"** en `/IA/IA.SDD/SDD/Guides/SDD-Getting-Started-Guide.md`.
+
+2. Evalua los objetivos y que alternativas hay al respecto.
+
+3. Evaluar la siguiente alternativa, mediante un archivo historial ubicado en
+`/<Repositorio-Destino>/SDD/Logs/Log.md`, donde `/<Repositorio-Destino>` es la ruta destino que se especifico en la invocación del prompt: `PROMPT-Agente-Bootstrap-SDD.md`. Enctonces este archivo `Log.md` registraría todo lo necesario para que el prompt  `PROMPT-Agente-Bootstrap-SDD.md` inicie el flujo de trabajo en contexto donde se quedo antes durante la interrupción. Y tambien serviría para que el desarrollador tuviera un medio consulta sobre cuestiones, preguntas, respuestas y resultados presentados por los subagentes. Lo que queda analizar es incluir al información valida para que los subagentes retomen el contexto de forma adecuada. y que información debe contener para ela gente humano. 
+
+En todos la alternativas hay que considerar.
+En este sentido hay que considerar que si hay subagentes en paralelo no corrompan el fichero al escribir en este. Otra consideración es que 
+
+
+
+3.a  Generar un archivo historial que debería servir que al relanzar el promptorquestador pueda retomar el flujo de trabajo lanzado por el mismo prompt orquestador en otra sesión después de haber sido interrumpido o haber cambioado de host, reanudando el flujo de tarea sobrellevado en el momento de la interrupción recuperando las tareas en curso con sus subagentes asignado, y el contexto de cada uno de los subagentes, 
+
+2.b Asi mismo, ese historial debe servir para que el desarrollador de  `Framework SDD`  tenga ese documento como herramienta para revisar y consultar sobre decisiones tomadas en cada final de sprint o saber que consultas respondio a lo largo de la fase del flujo de trabajo por parte de los diferentes subagentes.
+
 
 ---
 
