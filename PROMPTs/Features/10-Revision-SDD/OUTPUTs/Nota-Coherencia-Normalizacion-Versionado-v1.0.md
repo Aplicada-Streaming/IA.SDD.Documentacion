@@ -2,7 +2,7 @@
 
 **Proyecto:** Framework SDD
 **Documento:** `Nota-Coherencia-Normalizacion-Versionado-v1.0.md`
-**Versión:** 1.2
+**Versión:** 1.3
 **Estado:** Vigente
 **Fecha:** 2026-07-28
 **Autor:** Revisión SDD (Claude Code)
@@ -205,6 +205,34 @@ Ningún archivo sube de versión por esta pasada: las correcciones son de clase 
 
 ---
 
+## 5.quater Parte 4 — Navegabilidad y anexos de datos del intake
+
+Origen distinto del resto: no sale de un defecto sino de contrastar la plantilla contra **dos intakes reales**, de soluciones sin relación entre sí, de 4023 y 2112 líneas.
+
+### Qué ya estaba y qué faltaba
+
+La **Parte D ya existía** en la plantilla 1.3, con la regla de autocontención y la cita por identificador, y los dos intakes la siguieron. No hubo que crearla. Lo que faltaba:
+
+| # | Hueco | Evidencia |
+| --- | --- | --- |
+| 1 | Sin tabla de contenido, ni en la plantilla ni en los dos intakes reales | Cuatro reglas exigen TOC a los documentos **generados**; el intake, que es el que más agentes leen, quedaba exento. Asimetría sin justificación |
+| 2 | El formato por escenario pedía tres piezas; los dos intakes agregaron tres bloques más por su cuenta | **Contexto**, **qué ejercita** y **qué verificar**, los tres en ambos documentos, de forma independiente |
+| 3 | El enum de `Estado` divergía | Plantilla: `verificado / propuesto / reconstruido`. Uso real: `medido / declarado / derivado / reconstruido` |
+| 4 | `Intake-Rules.md` no mencionaba la Parte D | La regla de autocontención existía declarada desde la 1.3 y **ninguna validación la verificaba** |
+
+El hueco 4 es del mismo tipo que los que motivaron toda esta revisión: una regla escrita que ningún actor comprueba.
+
+### Qué se aplicó
+
+- `SOLUTION-INTAKE-template.md` (1.3 → **1.4**): TOC obligatorio con los escenarios listados por identificador; formato por escenario de tres piezas a cinco; `Estado` como enum cerrado de cuatro valores, que es D9 aplicada a los datos de ejemplo; recomendación de encadenar los escenarios como una línea de tiempo.
+- `Intake-Rules.md` (2.0 → **2.1**): §5 valida la Parte D, el TOC, la regla de resolución de identificadores en las dos direcciones y la de autocontención.
+
+### Verificación de D7
+
+Los dos intakes de referencia pertenecen a dominios concretos. Se verificó que ninguno de sus términos se filtrara a los artefactos normativos: **cero ocurrencias** de vocabulario, identificadores o stack de esas soluciones en la plantilla y en la regla. Lo que se incorporó es la forma, no el contenido.
+
+---
+
 ## 6. Veredicto
 
 **CONFORME.** Las siete etapas del plan más E5b, y las seis de la Parte 2, están implantadas. Las verificaciones pasan: cero enlaces rotos, cero tablas mal formadas, cero archivos con sufijo de versión en el nombre, las tres salidas de la reconciliación declaradas y consistentes entre los cinco archivos que las citan. Las dos invariantes modificadas lo fueron con decisión explícita del responsable y quedan declaradas acá.
@@ -217,6 +245,7 @@ Queda abierta una sola decisión menor: si se confirma el criterio de §5 sobre 
 
 | Versión | Fecha | Cambios | Autor |
 |---|---|---|---|
+| 1.3 | 2026-07-28 | Se incorpora la Parte 4: navegabilidad y anexos de datos del intake, sintetizados del patrón que dos intakes reales desarrollaron por su cuenta. Tabla de contenido obligatoria, formato por escenario de tres piezas a cinco con el bloque de verificación que convierte el JSON en fixture, `Estado` como enum cerrado alineado con D9, y validación de la Parte D en `Intake-Rules`, que hasta acá no verificaba ninguna de las dos reglas que la plantilla declaraba. D7 verificado: cero filtraciones de los dominios de referencia. | Revisión SDD (Claude Code) |
 | 1.2 | 2026-07-28 | Se incorpora la Parte 3, de estabilización: las cuatro notas de coherencia readecuadas a las reglas vigentes por decisión del responsable, con la reexpresión declarada en cada celda; la contradicción de política que eso abría, reconciliada en el `README.md` separando el alcance de una verificación de su forma; y tres defectos preexistentes corregidos, entre ellos el `§6.5` inexistente de `Maqueta-Rules.md` citado desde tres archivos y el «modelo de dos repositorios» del master-prompt contra los tres que declara el README. Seis verificaciones, todas en cero. | Revisión SDD (Claude Code) |
 | 1.1 | 2026-07-28 | Se incorpora la Parte 2 de la versión `[4.0]`: la fase de reconciliación normativa de `Master-Prompt.md` §2.1, con sus tres salidas, los cinco archivos alcanzados y sus cinco verificaciones propias. Se documenta por qué no existe `_legacy/4.0/`: `[3.2]` y `[4.0]` se produjeron en la misma sesión sobre `[3.1]` y no hubo árbol publicado intermedio que preservar; un primer intento de snapshot produjo una copia que declaraba la versión 3.6 y se descartó por falso. Las dos partes quedan consolidadas en una sola entrada de changelog. | Revisión SDD (Claude Code) |
 | 1.0 | 2026-07-28 | Nota de coherencia de la normalización del versionado y del archivado. Inventario de 41 archivos con once renombres, 163 referencias y 751 nombres de artefacto normalizados. Verificación de las nueve invariantes, con D4 y D5 modificadas. Ocho verificaciones de implantación. Seis observaciones, incluidas la desviación respecto del reinicio de versiones y el defecto preexistente de los checklists de D4. Veredicto CONFORME. | Revisión SDD (Claude Code) |
