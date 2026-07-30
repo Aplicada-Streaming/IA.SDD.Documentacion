@@ -3,6 +3,21 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.12] - 2026-07-29
+
+La unidad de trabajo 13 pasa de **en edición** a **aplicada**: su plan se ejecutó y el framework SDD quedó publicado en la 6.0 con la capacidad de migración normativa. La carpeta reordena sus archivos con el prefijo numérico que el resto de las unidades ya usa.
+
+### Añadido
+
+- **`PROMPTs/Features/13-Ejecutar-Fix-Orquestador-Sobre-Intake/01-Planteo.md`**: el planteo intermedio entre la exploración y el plan. Formula las tres preguntas que el plan responde —si el alcance de la migración incluye los dos documentos de entrada además de los generados, si conviene una regla de migración, un playbook por salto de versión o el estado objetivo como principio rector, y si conviene un orquestador de migración contiguo al de generación—.
+- **`02-Ejecutar-Fix-Orquestador-Sobre-Intake.md`**: el tool-prompt reejecutable que consume el plan de `INPUTs/`. Encarga resolver las decisiones abiertas antes de tocar nada, ejecutar la etapa de snapshot antes de la primera modificación, recorrer las cinco etapas restantes de una por vez con nota de coherencia y confirmación humana entre medio, verificar los criterios de aceptación uno por uno y publicar la versión. Sus reglas prohíben la sustitución global de cadena para el renombre léxico, reescribir filas ya escritas de cualquier control de cambios, modificar `_legacy/` y escribir en el repositorio de un destino real.
+
+### Cambiado
+
+- **`Exploracion.md` renombrada a `00-Exploracion.md`** y el tool-prompt suelto reemplazado por su forma numerada, de modo que la unidad 13 quede con la secuencia `00` exploración, `01` planteo, `02` tool-prompt, como las demás.
+- **`INPUTs/Fix-Orquestador-Sobre-Intake.md`** (versión 1.1 → **1.2**): registra la ejecución. Las cuatro decisiones abiertas de su §10 quedan resueltas, todas por la recomendación que el propio plan proponía: F3 sube minor, la salida A de la reconciliación exige invocación nueva en lugar de encadenar, la migración alcanza destinos sin procedencia declarada con la clasificación degradada a «revisar todo», y la migración parcial se admite como estado final siempre que la procedencia no se reescriba y el estado se declare en el informe. Incorpora además las **tres correcciones que la ejecución encontró en el plan**: el inventario del renombre léxico clasificaba una fila de control de cambios como prosa normativa vigente, con lo que el grupo pasa de tres ocurrencias a dos y el registro final declara diecinueve revisadas y siete sustituidas; el bump de F4 era 1.4 a 1.5 y no 1.3 a 1.4, porque la guía de desarrollo ya estaba en 1.4 al arrancar; y la celda de estado consistente de la etapa E3 prometía la capacidad «invocable a mano» cuando la escritura del intake dependía de un cambio que recién llegaba en E4.
+- **`README.md` de la unidad 13**: pasa de «en edición» a **aplicado**, con el resultado, las cuatro resoluciones y lo que quedó explícitamente afuera —la emisión del plan sobre un destino real, porque el tool-prompt prohíbe escribir en un destino; el hueco H4 por decisión propia del plan; y una observación abierta no bloqueante—. El material de decisión que la carpeta ya tenía se conserva debajo como registro de lo que se presentó.
+
 ## [1.11] - 2026-07-29
 
 La carpeta de prompts de *features* corrige su nombre (`Feactures` a `Features`) y entran tres unidades de trabajo nuevas sobre el framework SDD —la segunda vuelta de revisión, el fix de gobierno del glosario ya aplicado y el fix del orquestador sobre intakes de versión anterior, en edición—, más el reemplazo del prompt 08 y la cuarta parte de la nota de normalización de versionado.
