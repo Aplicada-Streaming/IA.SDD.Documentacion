@@ -3,6 +3,19 @@
 Todos los cambios relevantes de este repositorio (`IA.SDD.Documentacion`) se documentan acá.
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
 
+## [1.13] - 2026-08-08
+
+Las guías de estudio salen de este repositorio y pasan a `IA/IA.Documentacion`, que queda como su lugar definitivo. Acá el material se había generado, pero su tema —documentación técnica, estilo de código, REST, informe de despliegue— no es el del framework SDD, que es lo que este repositorio documenta. El traslado ya está publicado en el repositorio destino antes de retirarlo de acá, con lo que en ningún momento el contenido queda sin repositorio que lo contenga.
+
+### Eliminado
+
+- **`Guias-de-Estudios/` completa**, con sus 184 archivos y las cuatro guías que la componían: `Documentacion-Tecnica`, `Organizacion-Estilo-Patrones-Codigo`, `Organizacion-Estilo-Rest-API` y `Documentacion-Informe-Despliegue`, más el `README.md` que las indexaba. El árbol íntegro —marco de referencia, mapa conceptual, capítulos numerados y anexos de cada una— está commiteado en `IA/IA.Documentacion/Guias-de-Estudios/` con el mismo layout. El contenido, además, queda en el historial de git de este repositorio.
+- **`PROMPTs/Guia-De-Estudio/`**, los seis tool-prompts que generaron esas guías y su insumo `Tipos-De-Documentacion-Tecnica.md`, retirados en el commit inmediatamente anterior por el mismo motivo: acompañan al material que producen, no al framework.
+
+### Cambiado
+
+- **`Notas/2022607271949.md`**: nueva entrada fechada `202608081602` con el primer paso del relevamiento —`01-Analisis-Relevamiento-Contexto-Existente` y la etapa `02-Definicion-Idea` de `RPI.VidelControl.Documentacion`—, encabezando la nota anterior, que se conserva. De paso se corrige el nombre del último proyecto anotado: `SelfHosted.Service.Core.Documentacion`, no `.Documentos`.
+
 ## [1.12] - 2026-07-29
 
 La unidad de trabajo 13 pasa de **en edición** a **aplicada**: su plan se ejecutó y el framework SDD quedó publicado en la 6.0 con la capacidad de migración normativa. La carpeta reordena sus archivos con el prefijo numérico que el resto de las unidades ya usa.
