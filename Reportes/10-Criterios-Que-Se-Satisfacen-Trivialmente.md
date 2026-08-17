@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Rules-Examples.md` §4.2, §6 y su propia fila 4.1 de control de cambios; por extensión, toda regla de categoría cuyos criterios de aceptación pregunten por la existencia de un artefacto) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Rules-Examples.md`; el patrón alcanza a los criterios de aceptación de las diecisiete reglas de categoría |
 | Naturaleza | Criterios de aceptación que preguntan si una declaración **está**, cuando la propiedad que importa es si lo que declara **es cierto**. Un artefacto vacío, o uno que declara algo falso, los cumple igual |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `09-El-Audit-Como-Unica-Compuerta.md`, que documenta el instrumento; éste documenta el criterio. `04-Recuentos-Declarados-En-Prosa.md`, que es el caso particular de este patrón aplicado a los números |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -153,3 +153,28 @@ Ninguna está decidida; son punto de partida.
 | 1.1 | 2026-08-12 | Se registra el desenlace de la segunda ronda de audit. La primera tanda de correcciones reincidió en el mismo defecto —al retirar dos casos de uso de un contrato se incorporó un tercero por afinidad de tema, que tampoco se ejercitaba— y ocho de los doce hallazgos interpretativos de esa ronda fueron el mismo patrón. §7 documenta la reparación estructural que el destino aplicó: la trazabilidad pasa a declarar qué pasos del flujo recorre la salida prometida y cuáles no, y el generador se niega a emitir sin esa frase. Cuatro casos de uso declarados no sobrevivieron a la exigencia, y ninguno de los cuatro lo había encontrado un auditor. Es la propuesta 4 de §8 implementada en un destino, y sirve como evidencia de que la intervención rinde. |
 | 1.2 | 2026-08-12 | Nueva §2.1, a pedido de una revisión humana que preguntó cómo se llega a declarar un caso de uso que no se ejercita. El reporte documentaba el defecto y no el mecanismo. Se nombran sus tres ingredientes —confundir precondición con flujo ejercitado, elegir por afinidad de tema, y no tener código que desmienta en la pasada de diseño— y se define qué significa que la salida no recorra el flujo: que ninguna línea de la salida prometida cambie como consecuencia de un paso, de modo que el sample pasa igual con ese caso de uso roto. |
 | 1.3 | 2026-08-12 | §7 registra que la reparación de la ronda anterior **no alcanzó**: la trazabilidad pasó a ser verdadera y el criterio de aceptación seguía sin tocar los pasos declarados, de modo que en nueve de catorce contratos había un caso de uso que ninguna aserción alcanzaba. La segunda reparación estructural hace que cada aserción declare qué caso de uso discrimina, y once samples tuvieron que ganar líneas en su salida para que sus casos de uso pudieran romperse. Queda enunciada la lección: una declaración verdadera y una verificable no son lo mismo, y el framework pide la primera. |
+| 1.4 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** Criterios de aceptación que se cumplen sin discriminar nada.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Rules-Examples.md` §4.6 | Trazabilidad falsable y el bloque `discrimina` |
+| `SDD-Development-Guide.md` Parte IV | La **regla de redacción de criterios**: un criterio que no puede fallar no verifica nada |
+
+**Después de la 7.0.** Su patrón se volvió a cometer y quedó registrado en la **8.6**: una regla escrita del lado que no bloquea, **por la intervención que tenía este reporte presente**.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

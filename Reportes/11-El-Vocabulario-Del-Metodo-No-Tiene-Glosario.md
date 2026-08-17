@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0. El criterio de gobierno de glosario, en las secciones de criterios de aceptación de las **once** reglas que lo llevan: `Root-Rules`, `Rules-Contexto`, `Rules-Necesidades-Negocio`, `Rules-Arquitectura-Tecnica`, `Rules-Backlog-Tecnico`, `Rules-Plan-Sprint`, `Rules-Calidad-Y-Pruebas`, `Rules-Devops`, `Rules-Examples`, `Rules-Documentacion` y `Rules-Prompts-AI`. Además `Vocabulario-Rules.md` §2, §6 y §8; `Master-Prompt.md` §15; `Deriva-Rules.md` completo |
 | Artefactos del framework alcanzados | Las once reglas de la fila anterior, `Vocabulario-Rules.md`, `Master-Prompt.md` §15 y `Deriva-Rules.md`. También las dos reglas que **no** llevan el criterio, `Rules-Especificacion-Funcional` y `Rules-UX-UI-DX`, siendo que la primera emite el glosario al que nueve de las once apuntan |
 | Naturaleza | El framework acuña vocabulario propio fuera de los seis términos que su regla de vocabulario gobierna; ese vocabulario no está declarado en ningún glosario suyo; y el criterio que exige declararlo está replicado en once reglas que apuntan a nueve destinos distintos, casi todos glosarios del producto. Una de las once ya enuncia la política correcta, sobre términos que no la necesitaban |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `03-Conjuntos-Cerrados-Entre-Categorias.md`, que documenta otro caso de dos categorías respondiendo distinto sobre lo mismo. `10-Criterios-Que-Se-Satisfacen-Trivialmente.md`, cuyo §3 registra que el criterio de glosario de `Rules-Examples.md` nació de un audit que se cumplía trivialmente |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -224,3 +224,29 @@ Ninguna está decidida; son punto de partida. Están ordenadas de la más barata
 | 1.0 | 2026-08-12 | Reporte inicial, emitido durante la Fase G a partir de una pregunta de revisión humana sobre cinco términos que la categoría 10 usaba sin declarar. Documenta que `Vocabulario-Rules.md` gobierna seis términos y que el framework acuña bastante más; que `sonda`, unidad del sensado de deriva y nombre de las 376 filas de una matriz, no está definida en ninguno de sus glosarios; que el framework da tres respuestas distintas sobre dónde vive el vocabulario de una categoría; y que el criterio de `Rules-Examples.md` §6 manda al glosario del producto términos que acuñó el método, con dos lecturas posibles y las dos malas. |
 | 1.1 | 2026-08-12 | Se amplía §4 a pedido de una revisión humana que pidió evidencia y consistencia suficientes para que el análisis de corrección no arranque de cero. El criterio de gobierno de glosario resultó estar replicado en once de las diecisiete reglas, mandando a nueve destinos distintos, con cita textual de cada uno. Aparecen dos hallazgos que la primera versión no tenía: `Rules-Plan-Sprint.md` §6 **ya enuncia la política correcta** —el vocabulario del método va al glosario operativo y no a uno de producto— sobre términos que ya estaban resueltos; y `Rules-Calidad-Y-Pruebas.md` §6 nombra `sonda` explícitamente y la manda a definirse en línea en el plan de pruebas, que es un noveno destino y el único que no es un glosario. Nueva §4.2 con la evidencia de que la inconsistencia se replica en el destino: la misma palabra quedó definida en la categoría 08 y sin definir en la 10, con las dos en cumplimiento. Nueva §4.3 con lo que cada respuesta posible exige y rompe, y una recomendación de partida. §1, §3, §7, §9 y §10 se reescriben para ser consistentes con la evidencia nueva. |
 | 1.2 | 2026-08-12 | §8 pasa de «nada todavía» a documentar el remedio local que el destino aplicó, a pedido del Product Owner, para poder seguir: un `Glosario-Metodo.md` a nivel producto, declarado como apartamiento, con diecisiete términos y una columna que dice cuáles define el framework y cuáles no; la polisemia de `montaje` y `umbral` resuelta; las categorías 08 y 10 citándolo en lugar de definir; y una comprobación mecánica, probada contra el defecto, que impide que otro documento vuelva a redefinir uno de sus términos. |
+| 1.3 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** El vocabulario del método no tenía glosario propio.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Master-Prompt.md` §15 | El **glosario operativo** recibe el vocabulario del método |
+| `Vocabulario-Rules.md` §8 | Los pendientes declarados y su cierre |
+| §6 de las reglas que no lo tenían | El criterio de gobierno del glosario |
+
+**Después de la 7.0.** El pendiente que dejó anotado **se corrió en la 8.6** y encontró **nueve términos** usados en dos o más artefactos del framework **sin definición en ninguno de sus glosarios**.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

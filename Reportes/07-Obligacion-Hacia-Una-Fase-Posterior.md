@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Master-Prompt` §6; `Rules-Contexto` §4.2; `Rules-Backlog-Tecnico` §3.4 y §6; `Rules-Plan-Sprint` §4.2, §4.5 y §6; `Rules-Calidad-Y-Pruebas` §2.1, §6 y §8) |
 | Artefactos del framework alcanzados | El plan de generación por categoría de `Master-Prompt.md` §6 y las cuatro reglas de categoría citadas |
 | Naturaleza | Obligaciones que apuntan hacia adelante en el orden de fases: una categoría tiene que referenciar, o satisfacer una condición sobre, un artefacto que todavía no existe. Las distancias medidas van de una a cinco fases |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `03-Conjuntos-Cerrados-Entre-Categorias.md`, que documenta otra forma de conflicto entre categorías: dos que afirman cosas incompatibles sobre el mismo conjunto |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -168,3 +168,29 @@ grep -n -A 12 "^## 5. Definition of Done" \
 | 1.4 | 2026-08-11 | Correcciones del audit de la Fase E. Seis recuentos habían quedado con el número anterior al agregar el cuarto incidente —incluido el título—, que es el defecto que el reporte `04` documenta ocurriendo dentro de un reporte por segunda vez. Se corrige además la distancia de la Fase A a la E, que estaba medida **sin contar la B2** pese a que el propio anexo argumenta que hay que contarla; la atribución de nueve criterios al acuerdo de equipo, que tiene ocho; los metadatos de origen y de secciones evaluadas; el tiempo verbal de §7.1, que describía en presente un estado ya superado; y §3, que no tenía fila para las fases E y G. Se agrega al anexo el comando que evidencia el cuarto incidente. |
 | 1.5 | 2026-08-11 | Correcciones de la ronda 2 del audit. §7 afirmaba que **los 75 documentos** de la Fase D pasaron a apuntar a la condición de terminado, y son **quince**: los otros sesenta nunca la referenciaron, y el árbol se había corregido retirándoles una fila que decía lo contrario. Y quedaban cinco recuentos más con el número anterior al cuarto incidente, incluido uno que la fila 1.4 declaraba haber corregido. Se retira además el recuento de criterios del acuerdo, que no es el mismo en los cinco proyectos de código. |
 | 1.6 | 2026-08-12 | Se registra el desenlace del cuarto incidente, ocurrido al ejecutar la Fase G. Las cuatro matrices de sensado faltantes se emitieron, pero las emitió el generador de la categoría 10 y no la 08 reabierta, porque los contratos que las pueblan viven en la 10: la propuesta 3 de §8 pide devolver el turno y este caso muestra que hay que devolver también el insumo. Se registra además que la quinta matriz, la única que ya existía, había declarado su propia carencia con la forma que propone §8.2 y se cerró sin fricción, lo que es la primera evidencia a favor de esa propuesta. §7 pasa de cuatro resoluciones a seis y §9 suma un criterio de verificación. |
+| 1.7 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** Las obligaciones que una fase declara hacia otra que todavía no corrió.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Root-Rules.md` §12 | La **referencia pendiente**: se declara, no se rellena ni se inventa |
+| `Master-Prompt.md` §6 | Reapertura con insumo |
+| `Rules-Calidad-Y-Pruebas.md` §6 y `Rules-Contexto.md` §4 | Fuente única exigible |
+
+**Después de la 7.0.** **La comprobación que este reporte proponía se corrió, no sólo se incorporó.** Sobre las doce reglas de categoría encontró **tres obligaciones que ninguna corrida había detectado**, lo cual probó que la lista no estaba cerrada, tal como el reporte advertía. Y la **8.0** mejoró la solución: con el nivel por artefacto disponible, la condición de terminado se administra **en dos capas** en lugar de con una referencia pendiente.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

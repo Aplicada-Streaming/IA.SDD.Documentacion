@@ -3,7 +3,8 @@
 **Documento:** README.md
 **Versión:** 1.10
 **Fecha:** 2026-08-11
-**Estado:** Vigente
+**Estado:** Vigente — **los doce reportes están RESUELTOS**
+**Cierre:** aplicados sobre el framework en **SDD 7.0** (2026-08-15), como una sola intervención sobre los doce
 
 Índice de los reportes de hallazgos contra el `Framework SDD`, escritos para ser **insumo de prompts de intervención sobre el framework**. Ninguno modifica el framework: cada uno documenta un hueco con evidencia reproducible, para que la corrección se decida con datos y no con impresiones.
 
@@ -72,3 +73,28 @@ Cuatro de los doce salieron de la **Fase B2**, y tampoco es casualidad: es la pr
 | 1.8 | 2026-08-12 | Se incorpora el reporte `10`, emitido al cerrar la primera ronda del audit de la Fase G: tres contratos de verificación nombraban seis casos de uso que su comando no ejercita, y cumplían todos los criterios de aceptación de su regla. El patrón que documenta es que los criterios preguntan por la presencia de una declaración y no por su verdad, con el agravante de que el único que pregunta por la relación cuenta casos de uso sin cubrir, de modo que una sonda mentirosa lo acerca a cumplirse en vez de alejarlo. El propio framework nombró este patrón en el control de cambios de esa regla, a propósito del glosario, y lo reparó sin generalizarlo. |
 | 1.9 | 2026-08-12 | Se incorpora el reporte `11`, emitido durante la Fase G a partir de una pregunta de revisión humana: de dónde salían cinco términos que la categoría 10 usaba sin declarar. Cuatro son del framework y sólo uno está definido en un glosario suyo; `sonda`, que nombra la unidad del sensado de deriva y las 376 filas de una matriz, no está definida en ninguno. El framework además da tres respuestas distintas sobre dónde vive el vocabulario de una categoría. |
 | 1.10 | 2026-08-12 | El reporte `11` pasa a v1.1 tras una revisión humana que pidió evidencia suficiente para el análisis de corrección. Su §4 pasa de una tabla de tres filas a un inventario de las once reglas que llevan el criterio, con cita textual, los nueve destinos a los que mandan, la evidencia de que la inconsistencia se replica en el destino, y lo que cada respuesta posible exige y rompe. Se actualiza la fila del índice. |
+
+
+---
+
+## Cierre de los doce reportes
+
+**Los doce se aplicaron sobre el framework en una sola intervención, la SDD 7.0**, y cada uno lleva al
+final su sección «Cómo se resolvió» con dónde quedó escrito y qué pasó después. La nota de coherencia
+de esa intervención es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Por qué se trataron juntos y no de a uno.** Los doce salieron de la misma corrida sobre el mismo
+destino, y **alcanzaban artefactos compartidos**: `Root-Rules.md` aparece en cinco de ellos y
+`Master-Prompt.md` en seis. Aplicarlos por separado habría producido seis versiones sucesivas del
+mismo archivo, cada una sin ver lo que la siguiente iba a cambiar.
+
+**La propiedad que tenían en común, y que los volvió insumo del método.** Ninguno era un error de un
+agente: en los doce, **el agente cumplió la regla que tenía**, o la única que había no se podía cumplir
+sin inventar. Un reporte donde el agente se equivocó se corrige en el destino; uno donde el agente
+acertó y el resultado igual está mal **se corrige en el framework**, y por eso estos doce llegaron acá.
+
+**Cinco de los doce siguieron dando trabajo después de la 7.0**, y está anotado en cada uno: el `01` en
+la 8.2, el `05` en la 8.1, el `06` disuelto por la 8.0, el `07` mejorado por la 8.0, y el `09` llevado
+más lejos por la 8.4. Los reportes `04` y `10` tienen la constancia más incómoda: **su patrón se volvió
+a cometer**, y uno de los dos lo cometió la intervención que lo tenía presente.

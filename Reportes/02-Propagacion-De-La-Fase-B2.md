@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Master-Prompt` 5.2, `Maqueta-Rules` 3.1, `Deriva-Rules`, invariantes D1 a D9) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Maqueta-Rules.md` §3.6, §8 y §9; `SDD/Devs/Orchestrator/Master-Prompt.md` §441 y §442 |
 | Naturaleza | Dos huecos de la matriz de propagación, verificados con tres incidentes de una misma corrida |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `03-Conjuntos-Cerrados-Entre-Categorias.md`, que documenta un tercer incidente de la misma corrida cuya causa es distinta |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**. Cada afirmación sobre la normativa cita el archivo y la línea donde se verifica.
@@ -148,3 +148,25 @@ Sobre el destino, después de la propagación aplicada a mano, los dos números 
 | Versión | Fecha | Descripción |
 |---|---|---|
 | 1.0 | 2026-08-10 | Reporte inicial: dos huecos de la matriz de propagación de la Fase B2 —el disparador puntual sobre una fase iterativa, y la ausencia de fila para el caso en que la validación crea un proyecto de código— verificados con tres incidentes de una corrida real, con cinco propuestas de intervención. |
+| 1.1 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** La propagación de los hallazgos de la Fase B2 hacia atrás y hacia adelante.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Maqueta-Rules.md` §3.5 y §3.6 | La propagación se declara **por iteración**, con su regla de escape para que no cicle, y la regla de corte nombra el manifiesto: si alcanza §13 del intake, obliga a **rederivar el `PRODUCT-MANIFEST` en la misma corrida** |
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Master-Prompt` 5.2, `Rules-Especificacion-Funcional` 4.0, `Rules-UX-UI-DX` 4.0, invariantes D1 a D9) |
 | Artefactos del framework alcanzados | `README.md` (invariante D3), `SDD/Devs/Rules/Rules-Especificacion-Funcional.md`, `SDD/Devs/Rules/Rules-Necesidades-Negocio.md`, `SDD/Devs/Orchestrator/Master-Prompt.md` |
 | Naturaleza | Un hueco normativo con dos consecuencias, verificado con cinco incidentes de una misma corrida |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reporte relacionado | `00-Regla-Transcripción.md`, que documenta otro hueco de la misma clase: el framework exige un artefacto y no declara una de sus propiedades |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**. Cada afirmación sobre la normativa cita el archivo y la línea donde se verifica, y el anexo trae los comandos que reproducen cada verificación.
@@ -255,3 +255,29 @@ sed -n '/Numeración de identificadores/,/Control de cambios/p' \
 | Versión | Fecha | Cambios |
 |---|---|---|
 | 1.0 | 2026-08-10 | Reporte inicial. Un hueco normativo con tres facetas —ámbito de unicidad sin declarar, familia de identificadores sin forma declarada, y control de duplicación ubicado al cierre de fase—, verificado con cinco incidentes de la Fase B del destino `RPI.VidelControl` bajo el framework 6.0, con su evidencia reproducible y su propuesta de intervención. |
+| 1.1 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** El ámbito de unicidad de los identificadores, que no estaba declarado.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `README.md` D3 y `Root-Rules.md` §9 | El ámbito de unicidad pasa a ser el **producto** y no la categoría, con su sistema de identificadores completo |
+| `Master-Prompt.md` §3.4 | El **mapa de rangos** se deriva y se publica antes de despachar la primera categoría, porque varios subagentes numeran en paralelo |
+| `Rules-Especificacion-Funcional.md` §3.2 | Códigos de error y titularidad del identificador |
+
+**Después de la 7.0.** La unicidad **dentro de la familia** —que exista un `NB-00014` no vuelve ambiguo a un `CU-00014`— se precisó en la **8.2**, cuando apareció un destino que había acuñado su propia familia con **166 ocurrencias**.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

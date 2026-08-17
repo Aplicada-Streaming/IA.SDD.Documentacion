@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Master-Prompt` 5.2, `Intake-Rules` 3.2, `PRODUCT-INTAKE-template` 2.1) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Intake-Rules.md`, `SDD/Devs/Intake/PRODUCT-INTAKE-template.md`, `SDD/Devs/Orchestrator/Master-Prompt.md` |
 | Naturaleza | Tres huecos normativos verificados con un caso real, con su propuesta de corrección |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**. Cada hueco declara: el síntoma, la evidencia reproducible, por qué la normativa vigente no lo atrapa citando la sección exacta, el impacto, la corrección propuesta y la severidad de versión que implica. La última sección propone cómo verificar que la corrección funcionó.
 
@@ -294,3 +294,27 @@ El estado corregido del escenario, con el bloque de conteo que sirve de referenc
 | Versión | Fecha | Cambios |
 |---|---|---|
 | 1.0 | 2026-08-09 | Reporte inicial. Tres huecos normativos verificados sobre la corrida de la Fase A del destino `RPI.VidelControl` bajo el framework 6.0, con su evidencia reproducible y su propuesta de intervención. |
+| 1.1 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** Transcripción fiel y coherencia intra-escenario de los anexos de datos, y la marca de hallazgo *aguas arriba*.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `PRODUCT-INTAKE-template.md` §20 | La Parte D exige que todo escenario **transcriba** el dato completo y no lo referencie a un archivo externo |
+| `Intake-Rules.md` §5 y §7 | La validación suma la **regla de coherencia intra-escenario**: los cuatro bloques de un escenario dicen lo mismo, y toda magnitud que la prosa enuncie coincide con el JSON |
+| `Master-Prompt.md` §10 | El audit distingue el hallazgo **propio** del **aguas arriba**, que es el que no es del agente que lo encuentra |
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.
