@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Rules-Plan-Sprint` cabecera, §2.1, §2.2, §4.2, §4.6 y §6; `Rules-Contexto` §4.2; `Master-Prompt` §4 y §6) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Rules-Plan-Sprint.md`; por extensión, `Vocabulario-Rules.md` §4 R3, que es donde se declara el nivel de aplicación de cada regla |
 | Naturaleza | Un artefacto declarado a nivel proyecto de código cuyo referente —la iteración, la capacidad y la velocidad— es del equipo, que es un nivel producto |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `06-Obligatoriedad-Por-Tipo-Sin-Condicion.md`, que documenta el mismo error de nivel en otro atributo; `01-Ambito-De-Unicidad-De-Identificadores.md`, que lo documenta para el ámbito de un identificador |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -148,3 +148,26 @@ do tail -n +9 "$f" | md5sum; done | awk '{print $1}' | sort -u | wc -l
 | 1.2 | 2026-08-11 | Corrección de la segunda ronda del audit: §4 decía que en la iteración `S01` avanzan cuatro casos de uso y son seis. El recuento se desactualizó por la propia corrección de la ronda anterior, que agregó el plan de `S01` de `VideoControl-Domain` con su caso de uso. Es el defecto que el reporte `04` documenta, ocurriendo dentro de un reporte. |
 | 1.4 | 2026-08-11 | Corrección de la ronda 3: la frase de §7 quedó a medio camino entre las dos redacciones —«sin trabajo de capacidad comprometido», que no significa ninguna de las dos— y describía el README del destino diciendo tres cuando ese README dice cuatro. Se corrige la frase y se corrige el destino, que era donde estaba el error. |
 | 1.3 | 2026-08-11 | Correcciones de la ronda 2 del audit. La corrección anterior de §4 se aplicó a media oración: pasó «cuatro» a «seis» en la enumeración y lo dejó en «esos cuatro» doce palabras después. Y §7 decía que `VideoControl-PinMap` pasa cuatro iteraciones sin trabajo comprometido cuando son tres, y su iteración de arranque sí compromete once puntos: lo que pasa tres iteraciones sin comprometer es **capacidad**, no trabajo. |
+| 1.4 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** El sprint es del equipo y la categoría era del proyecto de código.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Vocabulario-Rules.md` §4 R3 | El **nivel de aplicación por artefacto**, que es la abstracción que faltaba |
+| `Rules-Plan-Sprint.md` | Los artefactos del equipo pasan a **nivel producto**, con la numeración de iteraciones corregida |
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

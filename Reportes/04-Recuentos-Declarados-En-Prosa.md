@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Master-Prompt` 5.2, `Root-Rules` 3.1, reglas de categoría 4.0, invariantes D1 a D9) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Root-Rules.md`, las reglas de categoría, los criterios de audit del `Master-Prompt` §10 |
 | Naturaleza | Una clase de dato que el framework produce en todos sus artefactos y no verifica en ninguno |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `00-Regla-Transcripción.md`, cuyo incidente original es un caso particular de este mismo patrón |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -155,3 +155,28 @@ El reporte [09](09-El-Audit-Como-Unica-Compuerta.md) desarrolla la parte que exc
 |---|---|---|
 | 1.0 | 2026-08-10 | Reporte inicial: el framework escribe datos derivados —los recuentos en prosa— con la misma forma que los datos declarados, no exige que nombren su fuente y no los verifica en ningún audit. Cinco incidentes de una misma corrida, en tres fases y tres niveles de documento, con cinco propuestas de intervención, de las cuales la más barata es eliminar el dato en lugar de verificarlo. |
 | 1.1 | 2026-08-12 | Se incorpora la evidencia de las fases D y E: tres rondas de audit independiente sobre la misma fase no agotaron el patrón, y 22 de sus 33 hallazgos son de esta clase. Se agrega además que el patrón ocurre dentro de los propios reportes de este directorio, y una precisión sobre la propuesta de §8: anclar un dato derivado exige que su frase no admita otro referente, porque un verificador sin esa restricción produce ruido. |
+| 1.2 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** Los recuentos escritos en la prosa, que envejecen sin avisar.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Root-Rules.md` §10 | La regla de **datos derivados en la prosa**: todo recuento declarado se ancla a su fuente, y quien la cambia sabe qué prosa revisar |
+| `Master-Prompt.md` §10 y §10.0 | La compuerta mecánica verifica los recuentos anclados **antes** del audit |
+
+**Después de la 7.0.** Su patrón siguió apareciendo, y quedó registrado: la **8.6** documenta una corrección aplicada sin revisar la prosa que la citaba, que es exactamente el defecto que este reporte describe.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Rules-Arquitectura-Tecnica` §2.1, §2.2, §6 y §7; invariante D8) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Rules-Arquitectura-Tecnica.md` y `SDD/Devs/Rules/Rules-Examples.md` §0, §2.1 y §2.2; por extensión, toda regla de categoría que condicione un artefacto obligatorio al `tipo_proyecto_codigo` |
 | Naturaleza | Un criterio de obligatoriedad que resuelve sobre el tipo cuando lo que determina el caso es el reparto de responsabilidades dentro del producto |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `01-Ambito-De-Unicidad-De-Identificadores.md` y `05-Ancho-De-Los-Identificadores.md`, que documentan otros dos atributos que el framework fija sin declarar de qué dependen |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -172,3 +172,28 @@ El apartamiento se aplicó sobre el destino y está registrado como decisión. N
 |---|---|---|
 | 1.0 | 2026-08-11 | Reporte inicial: el framework decide la obligatoriedad de un artefacto por el tipo del proyecto de código, que describe su forma, cuando lo que la determina es una responsabilidad que en un producto multiproyecto se reparte. Con las tres menciones desalineadas de la misma obligación, las dos salidas malas que el framework deja para cumplirla, y la observación de que el mecanismo correcto ya existe en `requiere_maqueta` y no se generalizó. |
 | 1.1 | 2026-08-12 | Se incorpora una segunda instancia del patrón, encontrada al ejecutar la Fase G: `Rules-Examples.md` declara la categoría obligatoria para `library` y le exige tres samples, con el motivo escrito de que el integrador los necesita para arrancar, y los cuatro `library` de este producto tienen `redistribuible` en `false` en el manifiesto. La instancia agrega tres cosas al enunciado de §6: que la regla sí tiene la condición pero fuera de las tablas que el orquestador ejecuta, que el campo que resolvería el caso ya está declarado en el manifiesto y la regla no lo lee, y que el piso de cantidad no tiene ninguna válvula. Nueva §6.1; se actualizan el origen y los artefactos alcanzados de la cabecera. El enunciado de §6 y el incidente original no se tocan. |
+| 1.2 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** La obligatoriedad de un artefacto declarada por tipo D8 sin la condición que la justifica.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Rules-Arquitectura-Tecnica.md` y `Rules-Examples.md` | La obligatoriedad pasa a depender del **flag**, no del tipo |
+| `Root-Rules.md` §11 | El **apartamiento declarado**: un artefacto obligatorio ausente **con** ADR se evalúa como decisión y no como omisión |
+
+**Después de la 7.0.** **El caso concreto se disolvió en la 8.0.** Con `tiene_persistencia` evaluado en la **unidad de entrega**, un monolito cuya persistencia vive en una de sus capas compiladas **sí persiste**, y su modelo lógico es uno solo: el conflicto que el reporte describía deja de poder ocurrir.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

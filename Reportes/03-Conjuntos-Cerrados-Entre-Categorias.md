@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Master-Prompt` 5.2, `Rules-Especificacion-Funcional` 4.0, `Rules-UX-UI-DX` 4.0, `Maqueta-Rules` 3.1) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Maqueta-Rules.md` §3.6; `SDD/Devs/Rules/Rules-Especificacion-Funcional.md`; `SDD/Devs/Rules/Rules-UX-UI-DX.md` |
 | Naturaleza | Un hueco de arbitraje: dos categorías pueden afirmar cosas incompatibles sobre el mismo conjunto y el método no declara quién decide |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `02-Propagacion-De-La-Fase-B2.md`, que documenta por qué la contradicción tuvo tiempo de existir |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -120,3 +120,26 @@ El desenlace de esta corrida sirve de caso de prueba: el Product Owner resolvió
 | Versión | Fecha | Descripción |
 |---|---|---|
 | 1.0 | 2026-08-10 | Reporte inicial: el framework no declara quién arbitra cuando una categoría necesita extender un conjunto cerrado que otra declaró, y ningún audit cruza dos categorías buscando contradicciones sobre el mismo referente. Verificado con el incidente de los valores de respuesta de la verificación de efecto, con cinco propuestas de intervención. |
+| 1.1 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** Los conjuntos cerrados que dos categorías declaraban por separado y podían divergir.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Rules-Especificacion-Funcional.md` §4.2 | Los conjuntos cerrados se marcan como tales, y su arbitraje **detiene** en lugar de resolverse por criterio del agente |
+| `Master-Prompt.md` | Registro de decisiones pendientes y **verificación cruzada como hallazgo P0** |
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

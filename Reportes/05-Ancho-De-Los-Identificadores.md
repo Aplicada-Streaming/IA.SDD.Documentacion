@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Deriva-Rules` 3.1, `Root-Rules` 3.1, invariantes D3 y D4) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Deriva-Rules.md` §2.1 y §2.3; los invariantes D3 y D4 de `Root-Rules.md` |
 | Naturaleza | Una convención de forma que en el caso general funciona y en el caso grande es imposible de cumplir, sin ninguna salida declarada |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `01-Ambito-De-Unicidad-De-Identificadores.md`, que documenta el otro atributo no declarado del mismo sistema de identificadores |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -161,3 +161,28 @@ La desviación se aplicó sobre el destino y está declarada en los dos artefact
 | Versión | Fecha | Descripción |
 |---|---|---|
 | 1.0 | 2026-08-11 | Reporte inicial: el framework fija el ancho de sus identificadores como convención de forma, sin declarar de qué colección es función ni qué hacer al agotarse el rango. Verificado con el desbordamiento de `EST-XX` a 191 elementos y de `SD-XX` a 374 en el cierre de la Fase B2, con dos corolarios —la estabilidad acelera el agotamiento, y la tabla derivada es la que con más seguridad desborda— y seis propuestas de intervención. |
+| 1.1 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** El ancho de los identificadores y las colecciones derivadas.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Root-Rules.md` §9 | Ancho uniforme de **cinco dígitos** y su fundamento |
+| `Deriva-Rules.md` §2.1 y §2.3 | Colecciones derivadas, con la **estabilidad y la capacidad tratadas juntas** |
+
+**Después de la 7.0.** La **8.1** cerró el caso que quedaba: los rangos por familia, cuando el mismo número existe en dos familias distintas.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.

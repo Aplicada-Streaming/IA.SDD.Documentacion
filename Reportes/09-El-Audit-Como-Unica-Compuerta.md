@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 6.0 (`Master-Prompt` §6 y §10; los criterios de aceptación §6 de las doce reglas de categoría) |
 | Artefactos del framework alcanzados | `SDD/Devs/Orchestrator/Master-Prompt.md`; por extensión, la sección de criterios de aceptación de toda regla de categoría |
 | Naturaleza | Una compuerta de fase que sólo admite un instrumento de muestreo, para verificar propiedades que en buena parte son enumerables |
-| Estado | Para evaluación. Ninguna modificación aplicada sobre el framework |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 7.0**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `04-Recuentos-Declarados-En-Prosa.md`, que documenta la clase de defecto que este reporte muestra que el audit no agota |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**.
@@ -151,3 +151,29 @@ sed -n '/^## 6. Criterios de aceptación/,/^---/p' Rules/Rules-Calidad-Y-Pruebas
 | Versión | Fecha | Descripción |
 |---|---|---|
 | 1.0 | 2026-08-12 | Reporte inicial, emitido al cerrar la Fase E tras tres rondas de audit. Documenta que el audit es la única compuerta de fase y no tiene ninguna comprobación mecánica delante, con la medición de las tres rondas: 33 hallazgos, 22 de ellos detectables por un guion. Enuncia el patrón —un solo instrumento para propiedades de dos naturalezas— y propone cinco intervenciones, incluida la que este destino ya construyó y las dos que no resolvió: el criterio de corte de las rondas y la clasificación de los criterios de aceptación. |
+| 1.1 | 2026-08-17 | Se marca **RESUELTO**: el reporte se aplicó en la **SDD 7.0** y se suma la sección «Cómo se resolvió», con dónde quedó escrito cada hueco y qué pasó después. |
+
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 7.0**, que trató los
+**doce reportes `00` a `11` juntos** por ser de la misma corrida y alcanzar artefactos compartidos. Su
+nota de coherencia es `SDD/Devs/Guides/Coherencia-Reportes-00-11.md`, con la trazabilidad reporte por
+reporte en su §4.
+
+**Qué resolvió, en una línea:** El audit era la única compuerta, y verificaba con criterio lo que se podía contar.
+
+| Dónde se aplicó | Qué quedó escrito |
+|---|---|
+| `Master-Prompt.md` §10.0 | La **compuerta mecánica previa al audit**, que verifica lo enumerable antes de que nadie interprete |
+| `Master-Prompt.md` §10 y §10.1 | El criterio de corte de las rondas y la marca de detectabilidad |
+| §6 de las diecisiete reglas | Cada criterio de aceptación se clasifica en `[enumerable]` o `[interpretativo]` |
+
+**Después de la 7.0.** La **8.4** la llevó un paso más: de **contar** defectos a **repararlos** cuando la reparación es unívoca.
+
+**Lo que este reporte tenía en común con los otros once**, y que el `CHANGELOG.md` del framework dejó
+registrado en su entrada `[7.0]`: **ninguno era un error de un agente**. En los doce, el agente cumplió
+la regla que tenía, o la única que había no se podía cumplir sin inventar. Es la propiedad que los
+volvió insumo de una intervención sobre el método, en lugar de una corrección sobre el destino.
