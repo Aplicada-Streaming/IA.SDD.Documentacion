@@ -1,6 +1,6 @@
 # Tool-Prompt — Reordenar las categorías 10 y 11 del Framework SDD y redefinir el cuerpo documental de entrega
 
-> **Invocación**: `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/09-Editar-Agent-Rules-Documentacion-Examples-final/Editar-Agent-Rules-Documentacion-Examples-final.md`
+> **Invocación**: `Lee y ejecuta /IA/SDD/IA.SDD.Documentacion/PROMPTs/Features/09-Editar-Agent-Rules-Documentacion-Examples-final/Editar-Agent-Rules-Documentacion-Examples-final.md`
 >
 > **Overview**: Intervenir las reglas constructivas del Framework SDD para (a) intercambiar las categorías 10 y 11, (b) redefinir la nueva categoría 10 (`10-Examples`) con doble arista —referencia de integración y arnés de autovalidación—, (c) redefinir la nueva categoría 11 (`11-Documentacion`) como cuerpo documental de entrega organizado por rol de intervención (integrador, mantenedor, operador) y destinado a que un lector humano sin contexto previo comprenda el desarrollo por primera vez, (d) incorporar el modelo de documentación viva en tres momentos, con cadencia anclada al cierre de sprint, ensayo de entrega como validación de utilidad y bitácora de eventualidades para capitalizar la experiencia de despliegue y operación, (e) agregar tabla de contenido a los documentos de las categorías 00 a 09, y (f) dotar al framework de una superficie de entrada —README raíz como router— y de una guía de desarrollo y extensibilidad. La intervención se ejecuta segmentada en ocho etapas con control de coherencia entre cada una.
 >

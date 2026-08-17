@@ -1,7 +1,7 @@
 # Tool-Prompt — Consultas sobre Documento-Intake-Generado
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/05-Consultas-Sobre-Tabla-Contenido-Y-Valores/Consultas-Sobre-Tabla-Contenido-Y-Valores.md`
+> - `Lee y ejecuta /IA/SDD/IA.SDD.Documentacion/PROMPTs/Features/05-Consultas-Sobre-Tabla-Contenido-Y-Valores/Consultas-Sobre-Tabla-Contenido-Y-Valores.md`
 > Overview: incoporar tablas de valores en el intake como anexo para consultas de los agentes especializados.
 
 ---
@@ -10,7 +10,7 @@
 
 lee `/DEV/SAI.Service.Core/SDD/Intake/SOLUTION-INTAKE-Sai-Service-Core-v1.0.md` es un el `documento intake`
 
-fue generado por un framework sdd: `/IA/IA.SDD/README.md`, corriendo el siguiente prompt: `/DEV/SAI.Service.Core/SDD/Intake/SOLUTION-INTAKE-Sai-Service-Core-v1.0.md`
+fue generado por un framework sdd: `/IA/SDD/IA.SDD/README.md`, corriendo el siguiente prompt: `/DEV/SAI.Service.Core/SDD/Intake/SOLUTION-INTAKE-Sai-Service-Core-v1.0.md`
 
 ---
 

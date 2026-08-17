@@ -1,14 +1,14 @@
 # Tool-Prompt — Fase SDD - Validacion-UX-UI
 
 > **Invocación**:
-> - `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/04-Agregar-Feature-SDD-Maqueta-Validacion-UX-UI/Agregar-Feature-SDD-Maqueta-Validacion-UX-UI.md`
+> - `Lee y ejecuta /IA/SDD/IA.SDD.Documentacion/PROMPTs/Features/04-Agregar-Feature-SDD-Maqueta-Validacion-UX-UI/Agregar-Feature-SDD-Maqueta-Validacion-UX-UI.md`
 > Overview: agregar fase de validación y maquetado como fase de validación. Primera prueba de sensor de deriva.
 
 ---
 
 # Contexto
 
-Leer `/IA/IA.SDD/README.md` y `/IA/IA.SDD/SDD/Guides/Guia-Usuario-SDD-v1.0.md`, trata sobre un `Framework SDD` para diseñar software asistido por IA.
+Leer `/IA/SDD/IA.SDD/README.md` y `/IA/IA.SDD/SDD/Guides/Guia-Usuario-SDD-v1.0.md`, trata sobre un `Framework SDD` para diseñar software asistido por IA.
 
 La etapa de documentación automática por parte del agente orquestador es una carga muy pesada para seguir, controlar y validar por parte del desarrollador humano. Y por otro lado, no se puede apreciar claramente como resultará las especificaciones sobre la UX y UI que se va a generar por parte del agente orquestador y las documentaciones establecidas en las diferentes etapas.
 

@@ -1,6 +1,6 @@
 # Tool-Prompt — Cambiando la nomenclatura de renombrando de documentos markdown de reglas.
 
-> **Invocación**: `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/07-Crear-Refactorizacion-Rules-File-Name/Crear-Refactorizacion-Rules-File-Name.md`
+> **Invocación**: `Lee y ejecuta /IA/SDD/IA.SDD.Documentacion/PROMPTs/Features/07-Crear-Refactorizacion-Rules-File-Name/Crear-Refactorizacion-Rules-File-Name.md`
 >
 > **Overview**: Cambiando la nomenclatura de renombrando de documentos markdown de reglas.
 
@@ -8,7 +8,7 @@
 
 ## Contexto
 
-Tengo esta estructura de archivos markdown en `/IA/IA.SDD/SDD/Devs/Rules`:
+  Tengo esta estructura de archivos markdown en `/IA/SDD/IA.SDD/SDD/Devs/Rules`:
 
 ```
 fernando@i7infra:~/workspaces/workspace-dev/IA/IA.SDD/SDD/Devs/Rules$ tree

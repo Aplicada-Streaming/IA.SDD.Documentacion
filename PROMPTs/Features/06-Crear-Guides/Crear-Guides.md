@@ -1,6 +1,6 @@
 # Tool-Prompt — Actualizar y generar guías de usuario del SDD
 
-> **Invocación**: `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Feactures/06-Crear-Guides/Crear-Guides.md`
+> **Invocación**: `Lee y ejecuta /IA/SDD/IA.SDD.Documentacion/PROMPTs/Features/06-Crear-Guides/Crear-Guides.md`
 >
 > **Overview**: Actualizar y agregar la guía getting started del SDD
 
@@ -74,7 +74,7 @@ Retroalimentar con la experiencia expuesta en [Contexto](#contexto) la documenta
 ## Solicitudes
 
 1. Leer y evaluar [SDD User Guide].
-2. A partir de los objetivos y el contexto planteado, generar el documento markdown **"SDD Getting Started Guide"** en `/IA/IA.SDD/SDD/Guides/SDD-Getting-Started-Guide.md`.
+2. A partir de los objetivos y el contexto planteado, generar el documento markdown **"SDD Getting Started Guide"** en `/IA/SDD/IA.SDD/SDD/Guides/SDD-Getting-Started-Guide.md`.
 
 ---
 

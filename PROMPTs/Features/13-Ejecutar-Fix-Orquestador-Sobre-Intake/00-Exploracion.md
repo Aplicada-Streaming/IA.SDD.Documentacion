@@ -1,7 +1,7 @@
 
 # Tool-Prompt — Exploración politicas de prompt orquestador
 
-> **Invocación**: `Leer y ejecutar /IA/IA.SDD.Documentacion/PROMPTs/Features/13-Ejecutar-Fix-Orquestador-Sobre-Intake/Exploracion.md`
+> **Invocación**: `Leer y ejecutar /IA/SDD/IA.SDD.Documentacion/PROMPTs/Features/13-Ejecutar-Fix-Orquestador-Sobre-Intake/00-Exploracion.md`
 >
 > **Overview**: Exploración politicas de prompt orquestador sobre si este actualiza la estructura del documento intake y demas documentos generados
 
@@ -9,7 +9,7 @@
 
 ## Contexto
 
-  Leer `/IA/IA.Prompts/README.md`, es trata sobre un `Framework SDD`. 
+  Leer `/IA/SDD/IA.SDD/README.md`, es trata sobre un `Framework SDD`. 
 
   El `Frameowork sdd` pantea un prompt orquestador que se aplica sobre un repositorio destino del cual tiene dos documentos iniciales , un intake y otro manifiesto. este prompt se puede aplicar sobre un marco documental de especificación procedente de un framework sdd de una versión anterior.
 

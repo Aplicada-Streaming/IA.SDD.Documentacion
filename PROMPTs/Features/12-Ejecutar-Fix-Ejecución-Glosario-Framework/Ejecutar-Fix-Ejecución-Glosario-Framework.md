@@ -1,6 +1,6 @@
 # Tool-Prompt — Fix glosario - revisión guides.
 
-> **Invocación**: `Lee y ejecuta /IA/IA.SDD.Documentacion/PROMPTs/Features/12-Ejecutar-Fix-Ejecución-Glosario-Framework/Ejecutar-Fix-Ejecución-Glosario-Framework.md`
+> **Invocación**: `Lee y ejecuta /IA/SDD/IA.SDD.Documentacion/PROMPTs/Features/12-Ejecutar-Fix-Ejecución-Glosario-Framework/Ejecutar-Fix-Ejecución-Glosario-Framework.md`
 >
 > **Overview**: Fix glosario - revisión guides.
 
@@ -8,7 +8,7 @@
 
 ## Contexto
 
-  Leer `/IA/IA.Prompts/README.md`, es trata sobre un `Framework SDD`. 
+  Leer `/IA/SDD/IA.SDD/README.md`, es trata sobre un `Framework SDD`. 
 
   Leer `/DEV/SelfHosted.Service.Core/SDD/Estado/Fix-Ejecución-Glosario-Framework.md`, es una evaluación que se hizo desde un sdd orquestado por el prompt orquestador y desde ahí se generó un `analisis sobre la generación actual de glosarios`.
 
@@ -34,8 +34,8 @@
 
 ## Reglas
 
-- No inventar información. 
-- Toda afirmación debe estar respaldada por evidencia verificable.
-- Ser fiel a la estructura constructiva del `Framework SDD`
+  - No inventar información. 
+  - Toda afirmación debe estar respaldada por evidencia verificable.
+  - Ser fiel a la estructura constructiva del `Framework SDD`
 
 
