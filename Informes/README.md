@@ -17,6 +17,7 @@ respaldo verificable**, y los hechos separados de las interpretaciones en una se
 | # | Informe | Tema | Estado |
 |---|---|---|---|
 | 1 | [Criterios de decisión en frameworks documentales operados por agentes](Criterios-De-Decision-En-Frameworks-Documentales.md) | Cómo se capturan, se encuentran y se aplican los criterios de decisión. DMN, ADR y gobernanza de agentes, contra el caso medido del Framework SDD | Vigente |
+| 2 | [Paso o prosa — la forma de un texto normativo](Paso-O-Prosa-La-Forma-De-Un-Texto-Normativo.md) | Cuándo un texto debe ser procedimiento y cuándo explicación. Diátaxis y diseño de listas de verificación, contra el caso de una regla correcta que no se aplicó | Vigente |
 
 ## Cómo leerlos
 
@@ -29,3 +30,4 @@ externas como internas reproducibles sobre el repositorio.
 | Versión | Fecha | Cambios |
 |---|---|---|
 | 1.0 | 2026-08-17 | Emisión inicial, con el primer informe de la carpeta. |
+| 1.1 | 2026-08-18 | Suma el informe **2**, sobre la forma de un texto normativo. Los dos informes de la carpeta comparten una pregunta: por qué un cuerpo normativo correcto puede no aplicarse. |
