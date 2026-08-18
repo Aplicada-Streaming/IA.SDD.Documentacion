@@ -94,6 +94,7 @@ audita, quién lo mantiene y dónde vive.
 | # | Reporte | Estado |
 |---|---|---|
 | 12 | [La compuerta declarada y la compuerta ejecutada](12-La-Compuerta-Declarada-Y-La-Compuerta-Ejecutada.md) | **Para evaluación** |
+| 13 | [El estrato del hallazgo y la legitimidad de la detención](13-El-Estrato-Del-Hallazgo-Y-La-Legitimidad-De-La-Detencion.md) | **Para evaluación** |
 
 ---
 
