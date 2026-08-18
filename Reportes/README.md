@@ -3,7 +3,7 @@
 **Documento:** README.md
 **Versión:** 1.10
 **Fecha:** 2026-08-11
-**Estado:** Vigente — **los doce reportes están RESUELTOS**
+**Estado:** Vigente — los doce primeros **RESUELTOS**; el `12` **para evaluación**
 **Cierre:** aplicados sobre el framework en **SDD 7.0** (2026-08-15), como una sola intervención sobre los doce
 
 Índice de los reportes de hallazgos contra el `Framework SDD`, escritos para ser **insumo de prompts de intervención sobre el framework**. Ninguno modifica el framework: cada uno documenta un hueco con evidencia reproducible, para que la corrección se decida con datos y no con impresiones.
@@ -73,7 +73,27 @@ Cuatro de los doce salieron de la **Fase B2**, y tampoco es casualidad: es la pr
 | 1.8 | 2026-08-12 | Se incorpora el reporte `10`, emitido al cerrar la primera ronda del audit de la Fase G: tres contratos de verificación nombraban seis casos de uso que su comando no ejercita, y cumplían todos los criterios de aceptación de su regla. El patrón que documenta es que los criterios preguntan por la presencia de una declaración y no por su verdad, con el agravante de que el único que pregunta por la relación cuenta casos de uso sin cubrir, de modo que una sonda mentirosa lo acerca a cumplirse en vez de alejarlo. El propio framework nombró este patrón en el control de cambios de esa regla, a propósito del glosario, y lo reparó sin generalizarlo. |
 | 1.9 | 2026-08-12 | Se incorpora el reporte `11`, emitido durante la Fase G a partir de una pregunta de revisión humana: de dónde salían cinco términos que la categoría 10 usaba sin declarar. Cuatro son del framework y sólo uno está definido en un glosario suyo; `sonda`, que nombra la unidad del sensado de deriva y las 376 filas de una matriz, no está definida en ninguno. El framework además da tres respuestas distintas sobre dónde vive el vocabulario de una categoría. |
 | 1.10 | 2026-08-12 | El reporte `11` pasa a v1.1 tras una revisión humana que pidió evidencia suficiente para el análisis de corrección. Su §4 pasa de una tabla de tres filas a un inventario de las once reglas que llevan el criterio, con cita textual, los nueve destinos a los que mandan, la evidencia de que la inconsistencia se replica en el destino, y lo que cada respuesta posible exige y rompe. Se actualiza la fila del índice. |
+| 1.11 | 2026-08-17 | Suma el **reporte 12**, primero emitido después del cierre de los doce originales. La cabecera distingue los RESUELTOS del que está para evaluación. |
 
+
+---
+
+## Reporte 12, abierto
+
+**El circuito volvió a usarse.** El `12` se emitió el 2026-08-17 sobre la compuerta mecánica: está
+declarada en prosa y **su ejecución depende del agente que la lee**, así que no es reproducible, no
+deja evidencia estructurada y su cobertura no se puede medir.
+
+Propone evaluar un **verificador**, y declara que la decisión **no es de implementación sino de alcance
+del método**: hoy el framework no contiene código ejecutable —verificable con `find SDD -type f -not
+-name '*.md'`, que devuelve cero—, y agregarlo cambia qué significa versionar el conjunto, cómo se
+audita, quién lo mantiene y dónde vive.
+
+**Se emite sin conclusión a propósito**, con las cuatro mediciones que faltan para decidir.
+
+| # | Reporte | Estado |
+|---|---|---|
+| 12 | [La compuerta declarada y la compuerta ejecutada](12-La-Compuerta-Declarada-Y-La-Compuerta-Ejecutada.md) | **Para evaluación** |
 
 ---
 
