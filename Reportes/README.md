@@ -1,9 +1,9 @@
 # Reportes de evidencia sobre el Framework SDD
 
 **Documento:** README.md
-**Versión:** 1.10
-**Fecha:** 2026-08-11
-**Estado:** Vigente — los doce primeros **RESUELTOS**; el `12` **para evaluación**
+**Versión:** 1.11
+**Fecha:** 2026-08-18
+**Estado:** Vigente — los doce primeros **RESUELTOS**; el `12`, el `13` y el `14` **para evaluación**
 **Cierre:** aplicados sobre el framework en **SDD 7.0** (2026-08-15), como una sola intervención sobre los doce
 
 Índice de los reportes de hallazgos contra el `Framework SDD`, escritos para ser **insumo de prompts de intervención sobre el framework**. Ninguno modifica el framework: cada uno documenta un hueco con evidencia reproducible, para que la corrección se decida con datos y no con impresiones.
@@ -37,6 +37,14 @@ Un prompt que vaya a intervenir el framework cita el reporte por su número y us
 | [09](09-El-Audit-Como-Unica-Compuerta.md) | El audit como única compuerta | El framework verifica cada fase con un solo instrumento —un lector independiente— y lo aplica igual a propiedades enumerables y a propiedades interpretativas; las primeras consumen la atención que sólo las segundas necesitan, y el método no declara criterio de corte para las rondas | Fase E |
 | [10](10-Criterios-Que-Se-Satisfacen-Trivialmente.md) | Criterios que se satisfacen trivialmente | Los criterios de aceptación preguntan si una declaración está presente y no si es verdadera; el único que pregunta por la relación cuenta lo que falta, de modo que una declaración falsa lo ayuda a cumplirse | Fase G |
 | [11](11-El-Vocabulario-Del-Metodo-No-Tiene-Glosario.md) | El vocabulario del método no tiene glosario | El framework acuña vocabulario propio fuera de los seis términos que su regla gobierna y no lo declara en ningún glosario suyo; el criterio que exige declararlo está replicado en once reglas que mandan a nueve destinos distintos, y una de ellas ya enuncia la política correcta sobre términos que no la necesitaban | Fase G |
+| [12](12-La-Compuerta-Declarada-Y-La-Compuerta-Ejecutada.md) | La compuerta declarada y la compuerta ejecutada | El método declara una compuerta y no comprueba que se haya corrido; una compuerta que nadie ejecuta se lee igual que una que pasó | Migración de un destino real |
+| [13](13-El-Estrato-Del-Hallazgo-Y-La-Legitimidad-De-La-Detencion.md) | El estrato del hallazgo y la legitimidad de la detención | El framework clasifica **cómo** se verifica un hallazgo y no **quién** puede cerrarlo; medido en una corrida real, tres de cinco detenciones llevadas al humano no eran del humano | Fase M6 de una migración real |
+| [14](14-El-Item-Obligatorio-Contestado-Con-Un-Diferimiento.md) | El ítem obligatorio contestado con un diferimiento | Un ítem de contenido obligatorio puede contestarse con la promesa de contestarlo; la promesa se lee igual que el dato, se ata a un evento del producto y **nada comprueba ese evento cuando ocurre** | Tercera reanudación de un destino real |
+
+**Los tres últimos están fuera del cierre de SDD 7.0** y de la lectura común de más abajo, que se
+escribió sobre los doce primeros. El `12`, el `13` y el `14` se incorporaron al índice el 2026-08-18,
+**después de haber sido escritos**: los dos primeros llevaban tiempo en la carpeta sin fila acá, que
+es la misma clase de defecto que varios de ellos describen.
 
 ## Lo que los doce tienen en común
 
