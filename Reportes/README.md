@@ -1,10 +1,10 @@
 # Reportes de evidencia sobre el Framework SDD
 
 **Documento:** README.md
-**Versión:** 1.12
+**Versión:** 1.13
 **Fecha:** 2026-08-20
 **Estado:** Vigente — **quince reportes**: catorce **RESUELTOS** y **uno para evaluación**, el `12`
-**Cierre:** los doce primeros, sobre **SDD 7.0** (2026-08-15), como una sola intervención. Los siguientes, de a uno: el `13` en **9.19**, el `14` en **10.0** y el `15` en **10.1**
+**Cierre:** los doce primeros, sobre **SDD 7.0** (2026-08-15), como una sola intervención. Los siguientes, de a uno: el `13` en **9.19**, el `14` en **10.0** y **11.0** —dos intervenciones, porque la primera dejó un criterio sin auditar— y el `15` en **10.1**
 
 Índice de los reportes de hallazgos contra el `Framework SDD`, escritos para ser **insumo de prompts de intervención sobre el framework**. Ninguno modifica el framework: cada uno documenta un hueco con evidencia reproducible, para que la corrección se decida con datos y no con impresiones.
 
@@ -49,8 +49,10 @@ escribió sobre los doce primeros. Su desenlace, uno por uno:
 |---|---|
 | `12` | **Para evaluación.** No es un fix: es una decisión de alcance —si el framework debe distribuir un verificador ejecutable— y **requiere intención de producto** (`Master-Prompt.md` §8.1) |
 | `13` | **Resuelto en 9.19.** Su eje de estratos fue **rechazado con fundamento escrito** y el resto entró como *la pregunta previa* de §8.1 |
-| `14` | **Resuelto en 10.0**, con `Root-Rules.md` §12.2 |
+| `14` | **Resuelto en 10.0**, con `Root-Rules.md` §12.2, y **completado en 11.0**: su criterio 4 —auditar el empaquetado sobre las quince reglas— se había declarado resuelto sin correrse. De ese desvío salió la **comprobación 13** del framework |
 | `15` | **Resuelto en 10.1**, con la séptima clase de exclusión de §VI.3.2 |
+
+**Los cuatro llevan al final su sección «Cómo se resolvió»**, con el desenlace de cada propuesta y **el veredicto de cada criterio de aceptación, uno por uno** — salvo el `12`, que no se aplicó.
 
 > **Quien agrega un reporte, agrega su fila.** El `12` y el `13` estuvieron en la carpeta **sin fila
 > acá** hasta el 2026-08-18, y el `15` se empujó sin indexar y se corrigió el 2026-08-20 — **tres
@@ -58,6 +60,22 @@ escribió sobre los doce primeros. Su desenlace, uno por uno:
 > que varios de estos reportes describen: un índice cuyo mantenimiento depende de que alguien se
 > acuerde reproduce el problema que vino a resolver. La regla es la misma que `SDD-Development-Guide.md`
 > §VI.3 comprobación 12 fija para el catálogo de criterios.
+
+> **Y la mitad que faltaba: quien resuelve un reporte, cierra su fila.** Las tres fallas de arriba son
+> de **emisión**; después aparecieron tres de **resolución** —el `13`, el `14` y el `15` siguieron
+> declarando «para evaluación, ninguna modificación aplicada» **después de aplicados**, y este índice
+> llegó a contradecirse a sí mismo—. **La causa es la misma que describe el reporte `14`**: el acto que
+> cambia el estado ocurre afuera —una intervención sobre el framework— y **nadie del lado de acá lo ve
+> pasar**.
+>
+> **Cómo se contrasta, y es enumerable.** Desde `SDD 11.1` la **comprobación 13** obliga a que la nota
+> de coherencia de toda intervención **enumere los criterios de aceptación de su origen y los conteste
+> uno por uno**. El desenlace de un reporte no se recuerda: **se lee de esa devolución**, y la sección
+> «Cómo se resolvió» de cada reporte la transcribe.
+>
+> **Lo que eso no compra**, declarado igual que lo declara el framework: obliga a que haya veredicto,
+> **no a que el veredicto sea verdadero**. El `14` es la prueba — se declaró resuelto con un criterio
+> sin contestar, y hoy ese mismo criterio está escrito con su «incumplido en 10.0».
 
 ## Lo que los doce tienen en común
 
@@ -95,6 +113,8 @@ Cuatro de los doce salieron de la **Fase B2**, y tampoco es casualidad: es la pr
 | 1.9 | 2026-08-12 | Se incorpora el reporte `11`, emitido durante la Fase G a partir de una pregunta de revisión humana: de dónde salían cinco términos que la categoría 10 usaba sin declarar. Cuatro son del framework y sólo uno está definido en un glosario suyo; `sonda`, que nombra la unidad del sensado de deriva y las 376 filas de una matriz, no está definida en ninguno. El framework además da tres respuestas distintas sobre dónde vive el vocabulario de una categoría. |
 | 1.10 | 2026-08-12 | El reporte `11` pasa a v1.1 tras una revisión humana que pidió evidencia suficiente para el análisis de corrección. Su §4 pasa de una tabla de tres filas a un inventario de las once reglas que llevan el criterio, con cita textual, los nueve destinos a los que mandan, la evidencia de que la inconsistencia se replica en el destino, y lo que cada respuesta posible exige y rompe. Se actualiza la fila del índice. |
 | 1.11 | 2026-08-17 | Suma el **reporte 12**, primero emitido después del cierre de los doce originales. La cabecera distingue los RESUELTOS del que está para evaluación. |
+| 1.12 | 2026-08-20 | Suma el **reporte 15**, empujado a la carpeta sin indexar, y reescribe el desenlace de los cuatro últimos como tabla, uno por uno. **Esta fila faltaba**: la intervención subió la cabecera a 1.12 y no la escribió, de modo que el índice declaró durante dos días una versión que su propio registro no conocía. Se restituye acá, con su fecha real, al detectarla la comprobación 10 de `SDD-Development-Guide.md` §VI.3. |
+| 1.13 | 2026-08-20 | **El índice declaraba «para evaluación» a tres reportes ya aplicados y se contradecía a sí mismo**: la tabla de desenlaces daba el `13` por resuelto en 9.19 y la sección del `12` lo seguía listando abierto. Los `13`, `14` y `15` pasan a **RESUELTO** —cada uno con su sección «Cómo se resolvió» y el veredicto de cada criterio de aceptación—, el `14` suma su segunda intervención, la **11.0**, y la sección del `12` deja de repetir el estado de otros reportes. Se declara además la mitad que faltaba de la regla del índice: **quien resuelve, cierra la fila**, contrastable desde `SDD 11.1` contra la **devolución al origen** de la comprobación 13. |
 
 
 ---
@@ -112,10 +132,9 @@ audita, quién lo mantiene y dónde vive.
 
 **Se emite sin conclusión a propósito**, con las cuatro mediciones que faltan para decidir.
 
-| # | Reporte | Estado |
-|---|---|---|
-| 12 | [La compuerta declarada y la compuerta ejecutada](12-La-Compuerta-Declarada-Y-La-Compuerta-Ejecutada.md) | **Para evaluación** |
-| 13 | [El estrato del hallazgo y la legitimidad de la detención](13-El-Estrato-Del-Hallazgo-Y-La-Legitimidad-De-La-Detencion.md) | **Para evaluación** |
+**Sigue abierto**, y es el único de los quince. La tabla de desenlaces de más arriba es la fuente: acá
+no se repite el estado de ningún otro reporte, que es lo que produjo la contradicción que la 1.13
+corrigió —esta sección declaraba «para evaluación» al `13`, resuelto en 9.19 dos días antes—.
 
 ---
 

@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD **10.0** (`SDD-Development-Guide.md` §VI.3 comprobación 8 y §VI.3.2) |
 | Artefactos del framework alcanzados | `SDD/Guides/SDD-Development-Guide.md` §VI.3.2 |
 | Naturaleza | Un hueco de método **más chico de lo que la primera lectura sugería**. §VI.3.2 **ya enumera seis clases** de exclusión; falta **una**, y el resto de los incidentes son de una clase **ya declarada que nadie consultó** |
-| Estado | **Para evaluación.** Ninguna modificación aplicada por este reporte |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 10.1**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `04-Recuentos-Declarados-En-Prosa.md`, del que hereda la forma —una obligación que se cumple a mano y nadie deriva—; y `14`, cuya intervención produjo dos de los tres incidentes |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**, y
@@ -164,3 +164,33 @@ tomar**. Mientras no se tome, la corrección tiene que vivir en la regla.
 |---|---|---|
 | 1.1 | 2026-08-20 | **Corrección sustantiva antes de aplicarse.** La emisión 1.0 afirmaba que faltaban **dos** clases estructurales de exclusión; **§VI.3.2 ya enumera seis**, y una de las dos —el registro emitido con fecha— **está entre ellas por triplicado**. El reporte se reescribe: el hueco real es **una** clase, la declaración de la propia intervención, y el incidente 1 deja de ser evidencia de un faltante para pasar a ser evidencia de que **la lista existe y no se consulta**. Se agrega la segunda causa raíz —la lista vive lejos del momento en que se enumera—, su propuesta correlativa —que la nota **cite** en vez de reconstruir— y la constancia de que las tres corridas fueron **del mismo agente**, de modo que esa explicación no está verificada contra nadie más. **El defecto de la 1.0 es el mismo que el reporte describe**: enumerar desde lo que uno ve en lugar de leer lo que ya está escrito. |
 | 1.0 | 2026-08-20 | Emisión inicial. Nace de **tres intervenciones consecutivas** —la publicación de SDD 10.0, la migración 9.12 → 10.0 de un destino real y su reparación de nomenclatura— en las que el barrido de §VI.3.2 levantó un residuo que su autor sabía legítimo y **enumeró después, tarde o nunca**. Declara **dos clases estructurales de exclusión** —la declaración misma y el registro emitido con fecha—, con el argumento de que **ninguna depende del concepto barrido** y por lo tanto pueden derivarse una vez. La evidencia incluye el incidente en que la exclusión **no se escribió**: la migración afirmó «superficie CERO» con dos ocurrencias vivas y una auditoría posterior lo levantó como **P2**, una afirmación **sustantivamente correcta y literalmente falsa**. Y el incidente en que sí se enumeró de entrada, **sólo porque el anterior estaba fresco** — que es memoria y no corrección. Tres propuestas, y la tercera es una advertencia: **no convertir el barrido en un guion**, porque eso cae en la decisión de alcance que el reporte `12` declara sin tomar. |
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 10.1**. Su nota de
+coherencia es `SDD/Devs/Guides/Coherencia-Exclusiones-Del-Barrido.md`.
+
+**Qué resolvió, en una línea:** la lista de exclusiones existía «para que no se redescubran cada vez» y
+se redescubría igual, porque nada la ponía delante de quien miraba su residuo.
+
+| Propuesta | Dónde quedó escrito |
+|---|---|
+| La séptima clase: **la declaración de la propia intervención** | `SDD-Development-Guide.md` §VI.3.2, tabla de clases estables |
+| Que la nota **cite** la lista en vez de reescribirla | §VI.3.2, sección de barrido de la nota de coherencia |
+| La comprobación 8 se reformula sobre las **siete** clases citadas | §VI.3 comprobación 8 |
+
+**Los cuatro criterios de aceptación de §7, contestados uno por uno:**
+
+| # | Criterio | Veredicto |
+|---|---|---|
+| 1 | §VI.3.2 enumera **siete** clases y la séptima es la declaración propia | **Cumple**: verificado sobre el archivo vivo, la séptima fila existe |
+| 2 | La comprobación 8 expresa su resultado incluyendo las estructurales | **Cumple**: *«fuera de las siete clases estables de §VI.3.2, que se citan y no se reescriben»* |
+| 3 | Ninguna nota posterior **reescribe** una clase ya enumerada: la cita | **Cumple** en las dos notas emitidas después —`Coherencia-Items-Empaquetados.md` y `Coherencia-Devolucion-Al-Origen.md`—, las dos citan |
+| 4 | *(Interpretativo)* Habría evitado los tres incidentes de §3 | **Cumple para el 2 y el 3**, que son de la clase nueva. **No para una variante del 1**: el barrido de la 10.0 falló por un **recuento** mal hecho y no por una exclusión omitida, y esa clase de error queda fuera del alcance de esta corrección |
+
+**Lo que quedó abierto, y está anotado en la nota de coherencia de la 11.0.** La comprobación 8 pide
+«cero ocurrencias vivas fuera de las exclusiones enumeradas» y **no pide que el recuento se reconcilie
+contra el snapshot**, que es lo único que habría delatado aquel error. Se dejó como pregunta, no como
+regla: sin un segundo caso medido, agregar una comprobación es lo que la 9.19 desaconsejó.

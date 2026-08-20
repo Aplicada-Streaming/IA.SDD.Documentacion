@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 9.18 (`Master-Prompt.md` §8.1 y §10; `Master-Prompt-Migracion.md` §10; `Catalogo-De-Criterios.md` 1.4) |
 | Artefactos del framework alcanzados | `SDD/Devs/Orchestrator/Master-Prompt.md` §8.1 y §10; `Master-Prompt-Migracion.md` §10; `SDD/Devs/Rules/Catalogo-De-Criterios.md` §4.1 |
 | Naturaleza | Un hueco de método con daño medido en una corrida real. No es un defecto de ninguna regla escrita: es una clasificación que falta |
-| Estado | **Para evaluación.** Ninguna modificación aplicada por este reporte |
+| Estado | **RESUELTO** — aplicado sobre el framework en **SDD 9.19**, con su propuesta central **rechazada con fundamento**. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `09-El-Audit-Como-Unica-Compuerta.md` y `12-La-Compuerta-Declarada-Y-La-Compuerta-Ejecutada.md`, que tratan el otro extremo del mismo eje: qué puede resolver un guion |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**, y
@@ -196,3 +196,27 @@ tiene respuesta en el árbol?»*—. Resuelve el caso medido con una oración en
 | Versión | Fecha | Cambios |
 |---|---|---|
 | 1.0 | 2026-08-18 | Reporte inicial. Registra que el método clasifica los criterios por **cómo se verifican** y no los hallazgos por **quién puede cerrarlos**, con la medición de una corrida real: **tres de cinco detenciones al humano no eran del humano**. Ubica la causa en que §8.1 declara la frontera desde la 9.16 pero no cómo se establece de qué lado cae un hallazgo, y en la asimetría de costos que decide en su lugar. Propone el **estrato del hallazgo** en tres niveles —E1 mecánico, **E2 verificable por lectura**, E3 del humano—, la **regla de legitimidad de la detención** con su «ante la duda, E3», y redefine al auditor independiente como **el instrumento que establece el estrato** en vez de un segundo opinante. Declara la alternativa mínima —una pregunta previa en §8.1, sin eje nuevo— como competidora seria y no la descarta. |
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO.** Se aplicó sobre el framework en la intervención **SDD 9.19**, y es el único de
+los quince cuyo **eje central fue rechazado**. Su nota de coherencia es
+`SDD/Devs/Guides/Coherencia-La-Pregunta-Previa.md`.
+
+**Qué resolvió, en una línea:** el framework clasificaba cómo se verifica un hallazgo y no quién puede
+cerrarlo — y resultó que no hacía falta un eje nuevo para saberlo.
+
+| Propuesta del reporte | Desenlace | Dónde quedó escrito |
+|---|---|---|
+| **§6 · El eje de estratos del hallazgo** | **Rechazada, con fundamento escrito** en la entrada `[9.19]` del `CHANGELOG.md`: *«un concepto más que mantener, en un método que declara que un procedimiento que crece deja de leerse, sólo se justifica si hace falta, y no hizo falta»* | — |
+| **§7 · La regla de legitimidad de la detención** | **Incorporada**, y en una forma más barata que la propuesta: **una sola pregunta previa** | `Master-Prompt.md` §8.1 — *«¿Esto tiene respuesta en el árbol?»*. Si se contesta con **cita literal**, no es detención: es trabajo propio |
+| **§5 · Qué compra la independencia del auditor** | **Incorporada** como las tres partes obligatorias del encargo: refutar y no verificar, cita literal o el veredicto no vale, «no concluyente» admitido | `Master-Prompt.md` §10 |
+
+**Por qué el rechazo es el resultado correcto y no una omisión.** La exigencia de cita produce sola la
+propiedad que el eje de estratos buscaba: **un hallazgo sostenido con cita es, por eso mismo, resoluble
+contra el árbol**. El reporte pedía clasificar; la 9.19 hizo que la clasificación fuera innecesaria.
+
+**Lo que quedó anotado como límite**, en la nota de coherencia: *«tres de cinco es una corrida y no una
+tasa»*, y si la proporción no se sostiene **la corrección barata es quitar la regla, no refinarla**.
