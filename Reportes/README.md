@@ -1,10 +1,10 @@
 # Reportes de evidencia sobre el Framework SDD
 
 **Documento:** README.md
-**Versión:** 1.11
-**Fecha:** 2026-08-18
-**Estado:** Vigente — los doce primeros **RESUELTOS**; el `12`, el `13` y el `14` **para evaluación**
-**Cierre:** aplicados sobre el framework en **SDD 7.0** (2026-08-15), como una sola intervención sobre los doce
+**Versión:** 1.12
+**Fecha:** 2026-08-20
+**Estado:** Vigente — **quince reportes**: catorce **RESUELTOS** y **uno para evaluación**, el `12`
+**Cierre:** los doce primeros, sobre **SDD 7.0** (2026-08-15), como una sola intervención. Los siguientes, de a uno: el `13` en **9.19**, el `14` en **10.0** y el `15` en **10.1**
 
 Índice de los reportes de hallazgos contra el `Framework SDD`, escritos para ser **insumo de prompts de intervención sobre el framework**. Ninguno modifica el framework: cada uno documenta un hueco con evidencia reproducible, para que la corrección se decida con datos y no con impresiones.
 
@@ -40,11 +40,24 @@ Un prompt que vaya a intervenir el framework cita el reporte por su número y us
 | [12](12-La-Compuerta-Declarada-Y-La-Compuerta-Ejecutada.md) | La compuerta declarada y la compuerta ejecutada | El método declara una compuerta y no comprueba que se haya corrido; una compuerta que nadie ejecuta se lee igual que una que pasó | Migración de un destino real |
 | [13](13-El-Estrato-Del-Hallazgo-Y-La-Legitimidad-De-La-Detencion.md) | El estrato del hallazgo y la legitimidad de la detención | El framework clasifica **cómo** se verifica un hallazgo y no **quién** puede cerrarlo; medido en una corrida real, tres de cinco detenciones llevadas al humano no eran del humano | Fase M6 de una migración real |
 | [14](14-El-Item-Obligatorio-Contestado-Con-Un-Diferimiento.md) | El ítem obligatorio contestado con un diferimiento | Un ítem de contenido obligatorio puede contestarse con la promesa de contestarlo; la promesa se lee igual que el dato, se ata a un evento del producto y **nada comprueba ese evento cuando ocurre** | Tercera reanudación de un destino real |
+| [15](15-Las-Exclusiones-Estructurales-Del-Barrido.md) | Las exclusiones estructurales del barrido | Una lista de excepciones que vive lejos del momento en que se enumera **se reescribe a mano aunque esté completa**; y la excepción que la mecánica de la comprobación produce siempre —la declaración de la propia intervención— no estaba en ella | Tres intervenciones consecutivas sobre el framework y un destino real |
 
-**Los tres últimos están fuera del cierre de SDD 7.0** y de la lectura común de más abajo, que se
-escribió sobre los doce primeros. El `12`, el `13` y el `14` se incorporaron al índice el 2026-08-18,
-**después de haber sido escritos**: los dos primeros llevaban tiempo en la carpeta sin fila acá, que
-es la misma clase de defecto que varios de ellos describen.
+**Los cuatro últimos están fuera del cierre de SDD 7.0** y de la lectura común de más abajo, que se
+escribió sobre los doce primeros. Su desenlace, uno por uno:
+
+| # | Desenlace |
+|---|---|
+| `12` | **Para evaluación.** No es un fix: es una decisión de alcance —si el framework debe distribuir un verificador ejecutable— y **requiere intención de producto** (`Master-Prompt.md` §8.1) |
+| `13` | **Resuelto en 9.19.** Su eje de estratos fue **rechazado con fundamento escrito** y el resto entró como *la pregunta previa* de §8.1 |
+| `14` | **Resuelto en 10.0**, con `Root-Rules.md` §12.2 |
+| `15` | **Resuelto en 10.1**, con la séptima clase de exclusión de §VI.3.2 |
+
+> **Quien agrega un reporte, agrega su fila.** El `12` y el `13` estuvieron en la carpeta **sin fila
+> acá** hasta el 2026-08-18, y el `15` se empujó sin indexar y se corrigió el 2026-08-20 — **tres
+> veces el mismo defecto**, y la tercera dos días después de declarar las dos primeras. Es la forma
+> que varios de estos reportes describen: un índice cuyo mantenimiento depende de que alguien se
+> acuerde reproduce el problema que vino a resolver. La regla es la misma que `SDD-Development-Guide.md`
+> §VI.3 comprobación 12 fija para el catálogo de criterios.
 
 ## Lo que los doce tienen en común
 
