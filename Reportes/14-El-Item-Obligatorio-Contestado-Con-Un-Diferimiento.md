@@ -8,7 +8,7 @@
 | Versión del framework evaluada | SDD 9.19 (`Rules-Devops.md` §4.3; `Root-Rules.md` §9.5 y §12; `Master-Prompt.md` §8.1) |
 | Artefactos del framework alcanzados | `SDD/Devs/Rules/Root-Rules.md` §12 · `SDD/Devs/Rules/Rules-Devops.md` §4.3 · las §4.x de toda regla que enumere ítems obligatorios |
 | Naturaleza | Un hueco de método con daño medido. **No es un defecto de ninguna regla escrita**: el framework pidió el dato y aceptó, sin decirlo, que se contestara con una promesa |
-| Estado | **Para evaluación.** Ninguna modificación aplicada por este reporte |
+| Estado | **RESUELTO** — aplicado en **SDD 10.0** y completado en **SDD 11.0**, donde se cerró el criterio de aceptación que la primera intervención dejó sin auditar. Ver «Cómo se resolvió», al final |
 | Reportes relacionados | `07-Obligacion-Hacia-Una-Fase-Posterior.md`, que trata obligaciones que apuntan hacia adelante entre categorías; acá la obligación apunta hacia adelante **en el tiempo del producto**, no entre categorías |
 
 Este documento está escrito para ser **insumo de un prompt de intervención sobre el framework**, y
@@ -226,3 +226,39 @@ hecho es el que lo detectó acá, pero por el síntoma y no por el diferimiento.
 | Versión | Fecha | Cambios |
 |---|---|---|
 | 1.0 | 2026-08-18 | Emisión inicial. Nace de la reparación de la divergencia `D-03` de un destino real —cero etiquetas contra ocho etapas cerradas— cuya causa no era el olvido de crear la etiqueta sino **un ítem obligatorio contestado con un diferimiento que sobrevivió ocho etapas a su propio evento de cierre**. Aporta la medición del incidente con su costo irreversible —tres de las ocho etapas ya no se pueden etiquetar sin inventar el punto—, el agravante del **puntero que no alcanza** —el diferimiento se registró contra un punto abierto que no lo cubría— y el del **ítem que empaqueta dos decisiones** cuando sólo una estaba bloqueada. Cinco propuestas, y la tercera —**que alguna compuerta levante un diferimiento cuyo evento ya ocurrió**— es la que cierra el lazo que hoy no cierra nadie. |
+
+---
+
+## Cómo se resolvió
+
+**Estado: RESUELTO**, en dos intervenciones y no en una. La **10.0** aplicó las cinco propuestas y la
+**11.0** cerró el criterio de aceptación que aquélla había dejado sin contestar. Notas de coherencia:
+`SDD/Devs/Guides/Coherencia-Item-Diferido.md` y `SDD/Devs/Guides/Coherencia-Items-Empaquetados.md`.
+
+**Qué resolvió, en una línea:** el método sabía atar una decisión a un evento futuro y no sabía cerrar
+el lazo cuando ese evento llegaba.
+
+| Propuesta | Dónde quedó escrito | Versión |
+|---|---|---|
+| §6.1 El ítem diferido es figura declarada | `Root-Rules.md` **§12.2**, cuatro campos obligatorios | 10.0 |
+| §6.2 El evento nombra un artefacto, no un momento | §12.2 punto 4: *«nombrando un artefacto y su sección — no un momento»* | 10.0 |
+| §6.3 La compuerta mecánica los cuenta | `Master-Prompt.md` §10.0, **comprobación transversal 6** | 10.0 |
+| §6.4 Los ítems que empaquetan dos decisiones se separan | `Rules-Devops.md` §4.3 punto 3.b, y **la auditoría sobre las quince reglas**: cinco ítems partidos | 10.0 y **11.0** |
+| §6.5 El orquestador de reanudación lo mira | `Master-Prompt-Reanudacion.md` R0 paso 4 y el bloque `ÍTEMS DIFERIDOS` de R1 | 10.0 |
+
+**Los cinco criterios de aceptación de §7, contestados uno por uno**, que es lo que este reporte
+terminó produciendo como método —la comprobación 13 de `SDD-Development-Guide.md` §VI.3:
+
+| # | Criterio | Veredicto |
+|---|---|---|
+| 1 | Forma marcada y contable | **Cumple** (10.0) |
+| 2 | Cuatro campos, evento como artefacto y sección | **Cumple** (10.0) |
+| 3 | **Alguna compuerta levanta un ítem cuyo evento ya ocurrió** | **Cumple** (10.0), en dos lugares |
+| 4 | Ningún ítem de una §4.x empaqueta dos decisiones. **Auditado sobre las quince reglas** | **Incumplido en 10.0**, **cumplido en 11.0** |
+| 5 | *(Interpretativo)* Habría detectado el caso con siete etapas de anticipación | **Cumple por construcción**; no se midió sobre el destino |
+
+**Lo que este reporte dejó de herencia, y no estaba entre sus propuestas.** Su criterio 4 se declaró
+resuelto sin haberse auditado, y las doce comprobaciones de la intervención pasaron igual **porque
+todas miran el árbol que quedó y el trabajo que faltaba no estaba en ningún archivo tocado**. De ahí
+salió la **comprobación 13, devolución al origen** (`SDD 11.1`): la nota enumera los criterios del
+origen y los contesta uno por uno. **Este reporte es el caso medido que la produjo.**
