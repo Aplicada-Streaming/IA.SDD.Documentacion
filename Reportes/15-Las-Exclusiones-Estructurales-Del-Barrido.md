@@ -7,7 +7,7 @@
 | Origen | Tres intervenciones consecutivas del framework y de un destino real —la publicación de SDD 10.0, la migración 9.12 → 10.0 y su reparación de nomenclatura—, en las que la misma clase de exclusión se descubrió **después** de que el barrido la levantara |
 | Versión del framework evaluada | SDD **10.0** (`SDD-Development-Guide.md` §VI.3 comprobación 8 y §VI.3.2) |
 | Artefactos del framework alcanzados | `SDD/Guides/SDD-Development-Guide.md` §VI.3.2 |
-| Naturaleza | Un hueco de método, **chico y con daño acotado**. No es un defecto de la regla: es una derivación que la regla no hace y que cada intervención rehace |
+| Naturaleza | Un hueco de método **más chico de lo que la primera lectura sugería**. §VI.3.2 **ya enumera seis clases** de exclusión; falta **una**, y el resto de los incidentes son de una clase **ya declarada que nadie consultó** |
 | Estado | **Para evaluación.** Ninguna modificación aplicada por este reporte |
 | Reportes relacionados | `04-Recuentos-Declarados-En-Prosa.md`, del que hereda la forma —una obligación que se cumple a mano y nadie deriva—; y `14`, cuya intervención produjo dos de los tres incidentes |
 
@@ -24,16 +24,19 @@ estructuralmente necesarias.** El resultado es que **cada intervención las rede
 el mismo orden: se corre el barrido, aparece un residuo que el autor sabe que es legítimo, y la
 exclusión se escribe **después**.
 
-**Medido en tres intervenciones consecutivas, y en las tres el residuo era de una de dos clases:**
+**Y §VI.3.2 ya hizo la mitad del trabajo.** Enumera **seis clases** de exclusión y declara
+explícitamente que están ahí *«para que no se redescubran cada vez»*. **La corrección de este reporte
+es por lo tanto mucho más chica de lo que su primera versión afirmaba**, y el hallazgo se parte en dos
+mitades de naturaleza distinta:
 
-| Clase | Qué es | Por qué es **necesaria** y no contingente |
+| | Qué es | Estado en el framework |
 |---|---|---|
-| **A · La declaración misma** | El documento que **declara el patrón** para poder convertirlo lo contiene, por definición | §VI.3.2 exige que la forma anterior se escriba **como patrón literal**. Un barrido que no pudiera nombrar lo que corrige sería inútil, de modo que **toda** intervención que declare un patrón produce este residuo |
-| **B · El registro emitido con fecha** | Informes de auditoría, notas de coherencia y entradas de registro **describen el estado de un momento** | Reescribirlos haría decir a un documento cerrado algo que no dijo. **Toda** intervención sobre un árbol con historia atraviesa esta clase |
+| **A · La declaración misma** | El documento que **declara el patrón** para poder convertirlo lo contiene, por definición. §VI.3.2 exige escribir la forma anterior **como patrón literal**, de modo que **toda** intervención que declare uno produce este residuo | **NO está entre las seis.** Es el hueco real |
+| **B · El registro emitido con fecha** | Informes, notas y entradas cerradas describen el estado de un momento | **YA está**, y por triplicado: «Filas de control de cambios», «Notas de coherencia anteriores» y `_legacy/` |
 
-**Ninguna de las dos depende del concepto que se esté barriendo.** Son consecuencia de la mecánica
-del barrido, no del caso — y por lo tanto se pueden derivar una vez en lugar de redescubrirse cada
-vez.
+**La mitad B no es un hueco del framework: es evidencia de que la lista no se consulta.** Fue escrita
+para no redescubrirse y se redescubrió igual — no porque falte, sino porque **nada pone la lista
+delante de quien corre el barrido** en el momento en que mira su residuo.
 
 ---
 
@@ -54,9 +57,9 @@ vez.
 
 | # | Intervención | Patrón barrido | Residuo | Clase | Cuándo se enumeró la exclusión |
 |---|---|---|---|---|---|
-| 1 | **SDD 10.0**, publicación | `Root-Rules.md §12` sin subsección | **1**, en `Coherencia-Reportes-00-11.md` | **B** | **Después** de correr el barrido |
-| 2 | **Migración 9.12 → 10.0** de un destino real | `Root-Rules.md §12` sin subsección | **2**, en el plan de migración y en el bloque de procedencia | **A** | **No se enumeró.** Quedó como hallazgo **P2** (`M-01`) de la auditoría de M6 |
-| 3 | **Reparación de nomenclatura** del mismo destino | `Dónde se cierra (artefacto y sección)` | **8**, en el plan de conversión | **A** | **Antes**, y sólo porque el incidente 2 acababa de ocurrir |
+| 1 | **SDD 10.0**, publicación | `Root-Rules.md §12` sin subsección | **1**, en `Coherencia-Reportes-00-11.md` | **B — ya declarada** | **Después**, y **escrita a mano** en lugar de citada: la fila «Notas de coherencia anteriores» de §VI.3.2 ya la cubría |
+| 2 | **Migración 9.12 → 10.0** de un destino real | `Root-Rules.md §12` sin subsección | **2**, en el plan de migración y en el bloque de procedencia | **A — el hueco** | **No se enumeró.** Quedó como hallazgo **P2** (`M-01`) de la auditoría de M6 |
+| 3 | **Reparación de nomenclatura** del mismo destino | `Dónde se cierra (artefacto y sección)` | **8**, en el plan de conversión | **A — el hueco** | **Antes**, y sólo porque el incidente 2 acababa de ocurrir |
 
 **El incidente 2 es el que da la medida.** No es que la exclusión se escribiera tarde: **no se
 escribió**, la migración afirmó «superficie CERO» con dos ocurrencias vivas, y el defecto lo levantó
@@ -69,26 +72,31 @@ de que la anterior esté fresca no es una corrección: es memoria.
 
 ---
 
-## 4. La causa raíz
+## 4. La causa raíz, y son dos
 
-**§VI.3.2 declara una obligación de resultado —residuo cero fuera de exclusiones enumeradas— sin
-declarar su derivación.** Las exclusiones quedan como una lista abierta que cada autor construye
-observando su propio residuo, y observar el residuo **es posterior a correr el barrido**. La regla
-pide, en los hechos, que se enumere de antemano algo que sólo se ve después.
+**La primera es un faltante simple:** de las clases que la mecánica del barrido produce **siempre**,
+§VI.3.2 enumera seis y **le falta la más autorreferencial de todas** — el documento que declara el
+patrón. Los incidentes 2 y 3 son exactamente ésa.
 
-**Es la misma forma del reporte `04`**: un dato que la regla obliga a escribir y no obliga a derivar,
-de modo que se escribe a mano, tarde, o no se escribe.
+**La segunda es más incómoda y explica el incidente 1.** La lista existe, dice de sí misma que está
+ahí «para que no se redescubran cada vez», **y las tres intervenciones la escribieron a mano en lugar
+de citarla**. El motivo es de ubicación y no de contenido: la lista vive en `SDD-Development-Guide.md`
+§VI.3.2, y **la nota de coherencia se escribe mirando el residuo**, no la guía. Nada, en el momento
+en que el autor enumera, lo manda a leer lo que ya está enumerado.
+
+**Es una variante del reporte `04`** —un dato que se escribe a mano cuando podría derivarse— con un
+agravante propio: acá **el trabajo ya estaba hecho** y aun así se rehízo.
 
 ---
 
 ## 5. El patrón, enunciado
 
-> **Cuando una regla exige enumerar las excepciones a una comprobación y no declara cuáles son
-> estructuralmente necesarias, la enumeración se vuelve un descubrimiento en lugar de una
-> derivación.** Quien interviene sólo puede escribirla después de ver el residuo, de modo que el
-> resultado depende de que recuerde mirarlo; y las excepciones que la mecánica de la comprobación
-> produce **siempre** —no las del caso— se redescubren una vez por intervención, hasta que alguna las
-> omita y la comprobación afirme algo literalmente falso.
+> **Una lista de excepciones que vive lejos del momento en que se enumera se reescribe a mano aunque
+> esté completa.** Enumerarla una vez —que es lo correcto y lo que §VI.3.2 hizo— no alcanza si nada
+> pone la lista delante de quien mira su residuo: el autor la reconstruye desde lo que ve, de modo que
+> **acierta en lo que le apareció y omite lo que no**. Y cuando la mecánica de la comprobación produce
+> una excepción que la lista no tiene, esa omisión no se nota: la comprobación afirma cero y hay
+> residuo vivo, que es una afirmación **sustantivamente correcta y literalmente falsa**.
 
 ---
 
@@ -96,17 +104,21 @@ de modo que se escribe a mano, tarde, o no se escribe.
 
 **Punto de partida, no decisión tomada.**
 
-### 6.1 §VI.3.2 declara las dos exclusiones estructurales, y se dan por enumeradas
+### 6.1 La séptima clase entra en la tabla de §VI.3.2
 
-Que la regla las escriba una vez, con su motivo, y declare que **no hace falta repetirlas** en cada
-nota de coherencia:
+Una fila más, con la forma de las seis que ya están:
 
-> **Dos exclusiones son estructurales y se dan por enumeradas.** **La declaración misma** —el
-> documento que escribe el patrón para poder convertirlo lo contiene por definición— y **el registro
-> emitido con fecha** —informes, notas y entradas cerradas, que describen el estado de un momento—.
-> La intervención **no las repite**; sí enumera cualquier otra, con su motivo.
+| Clase | Por qué se excluye |
+| --- | --- |
+| **La declaración de la propia intervención** | Escribe la forma anterior **como patrón literal** porque §VI.3.2 se lo exige; nombrarla es su función. Un barrido que no pudiera nombrar lo que corrige sería inútil |
 
-**Costo: tres líneas.** Elimina las dos clases que produjeron los tres incidentes.
+**Costo: una fila.** Cubre los incidentes 2 y 3.
+
+### 6.1.b Y la nota de coherencia **cita** la lista en vez de reconstruirla
+
+Que §VI.3 declare que la sección de barrido **enumera sólo las exclusiones propias del caso** y
+**cita** §VI.3.2 para las estables. Es lo que cubre el incidente 1, y es la mitad que la fila nueva
+no arregla: sin esto, la próxima intervención vuelve a escribir a mano una lista que ya existe.
 
 ### 6.2 La comprobación 8 distingue residuo estructural de residuo real
 
@@ -124,18 +136,21 @@ tomar**. Mientras no se tome, la corrección tiene que vivir en la regla.
 
 ## 7. Cómo verificar que la corrección funcionó
 
-- [ ] [enumerable] §VI.3.2 declara **las dos** exclusiones estructurales con su motivo.
+- [ ] [enumerable] §VI.3.2 enumera **siete** clases, y la séptima es la declaración de la propia intervención.
 - [ ] [enumerable] La comprobación 8 de §VI.3 expresa su resultado esperado **incluyendo** las estructurales.
-- [ ] [enumerable] Ninguna nota de coherencia posterior repite las dos estructurales en su enumeración.
-- [ ] [interpretativo] Sobre los tres incidentes de §3, la corrección **los habría evitado a los tres** sin que el autor tuviera que mirar el residuo.
+- [ ] [enumerable] Ninguna nota de coherencia posterior **reescribe** una clase que §VI.3.2 ya enumera: la cita.
+- [ ] [interpretativo] Sobre los tres incidentes de §3, la corrección **los habría evitado a los tres**: la fila nueva cubre el 2 y el 3, y la cita obligatoria cubre el 1.
 
 ---
 
 ## 8. Lo que este reporte no sabe
 
-- **Si hay una tercera clase estructural.** Se observaron dos en tres intervenciones. Un barrido sobre
-  un concepto con presencia en código —y no sólo en documentación— podría producir otra, y **este
-  reporte no la busca**.
+- **Si falta alguna clase además de la séptima.** Se observaron tres incidentes y **una sola clase
+  ausente**. Un barrido sobre un concepto con presencia en código —y no sólo en documentación— podría
+  producir otra, y **este reporte no la busca**.
+- **Por qué las tres intervenciones no leyeron la lista.** Se propone una explicación —vive lejos del
+  momento en que se enumera— y **no se verificó contra ningún otro autor**: las tres corridas fueron
+  del mismo agente, de modo que la muestra es de uno.
 - **Cuánto residuo de clase B hay hoy en destinos con historia larga.** No se midió: el incidente 1
   dio **1**, sobre un árbol de framework, y nadie contó el equivalente en un destino de producto.
 - **Si la clase B debería excluirse o resolverse de otro modo.** Un registro emitido no se reescribe,
@@ -147,4 +162,5 @@ tomar**. Mientras no se tome, la corrección tiene que vivir en la regla.
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 1.1 | 2026-08-20 | **Corrección sustantiva antes de aplicarse.** La emisión 1.0 afirmaba que faltaban **dos** clases estructurales de exclusión; **§VI.3.2 ya enumera seis**, y una de las dos —el registro emitido con fecha— **está entre ellas por triplicado**. El reporte se reescribe: el hueco real es **una** clase, la declaración de la propia intervención, y el incidente 1 deja de ser evidencia de un faltante para pasar a ser evidencia de que **la lista existe y no se consulta**. Se agrega la segunda causa raíz —la lista vive lejos del momento en que se enumera—, su propuesta correlativa —que la nota **cite** en vez de reconstruir— y la constancia de que las tres corridas fueron **del mismo agente**, de modo que esa explicación no está verificada contra nadie más. **El defecto de la 1.0 es el mismo que el reporte describe**: enumerar desde lo que uno ve en lugar de leer lo que ya está escrito. |
 | 1.0 | 2026-08-20 | Emisión inicial. Nace de **tres intervenciones consecutivas** —la publicación de SDD 10.0, la migración 9.12 → 10.0 de un destino real y su reparación de nomenclatura— en las que el barrido de §VI.3.2 levantó un residuo que su autor sabía legítimo y **enumeró después, tarde o nunca**. Declara **dos clases estructurales de exclusión** —la declaración misma y el registro emitido con fecha—, con el argumento de que **ninguna depende del concepto barrido** y por lo tanto pueden derivarse una vez. La evidencia incluye el incidente en que la exclusión **no se escribió**: la migración afirmó «superficie CERO» con dos ocurrencias vivas y una auditoría posterior lo levantó como **P2**, una afirmación **sustantivamente correcta y literalmente falsa**. Y el incidente en que sí se enumeró de entrada, **sólo porque el anterior estaba fresco** — que es memoria y no corrección. Tres propuestas, y la tercera es una advertencia: **no convertir el barrido en un guion**, porque eso cae en la decisión de alcance que el reporte `12` declara sin tomar. |
